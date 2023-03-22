@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Eulogs</title>
+    <link>https://www.eulogs.com/index.xml</link>
+    <description>Recent content on Eulogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Mar 2023 21:29:46 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conscious AI</title>
+      <link>https://www.eulogs.com/posts/conscious-ai/</link>
+      <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/conscious-ai/</guid>
+      <description>Summarized explanation of Conscious-AI Research Paper</description>
+      <content:encoded><![CDATA[<p>DOI: <a href="https://arxiv.org/abs/2105.07879">Paper Link</a></p>
+<h1 id="introduction">Introduction</h1>
+ <p style="text-align:center;"><b>Three levels of Intelligence</b></p>
+<ul>
+<li>
+<p><strong>Mechanical</strong>
+Corresponds to repetitive tasks that require consistency and accuracy, e.g. order-taking machines in restaurants or robots in manufacturing assembly processes.</p>
+</li>
+<li>
+<p><strong>Analytical</strong>
+Corresponds to less routine task, but the one which is more inclined towards classification side (e.g., credit application determinations, market segmentation, revenue predictions, etc.)</p>
+</li>
+<li>
+<p><strong>Empathy, Intution and Creativity</strong>
+Few AI applications exist at this level. Although empathy and intution are <em>believed</em> to be directly related to human consciousness.</p>
+</li>
+</ul>
+<p>Progression of AI into higher intelligence task can fundamentally disrupt the service industry and severely affect employment and business models as AI agents will replace more humans.</p>
+<h1 id="goals-of-paper">Goals of Paper</h1>
+<ul>
+<li>
+<p>Focus on what is required for such conscious state to arise and how we can recognize conscious machines.</p>
+</li>
+<li>
+<p>Putting forward a theory on how consciousness would emerge in its primitive state in AI agents</p>
+<ul>
+<li>with that, it will also put forward how conscious AI may progress towards a point that we can <em>deterministically</em> recognize it as conscious AI.</li>
+</ul>
+</li>
+<li>
+<p>Advancing our understanding of Empathic AI as final stage of intelligence.</p>
+</li>
+</ul>
+<h1 id="preliminary-observation">Preliminary Observation</h1>
+<ul>
+<li>
+<p>Turing (1950) introduced a test that later became known as the Turing Test to pinpoint when it can be said a machine (a standard computational machine) is capable of thinking.</p>
+</li>
+<li>
+<p>The Turing Test can identify <em>thinking machines</em> only at their maturity when they have achieved linguistic indistinguishability from humans</p>
+</li>
+<li>
+<p>Research on consciousness is vast and involves many scientific disciplines (e.g. sociology, neurology, psychology, pathology, philosophy, physics etc)</p>
+</li>
+</ul>
+<h1 id="proposition">Proposition</h1>
+<ul>
+<li>
+<p>Principled framework that can identify <em>thinking machines</em> through their path toward maturity along with minimum requirements under which machine consciousness can emerge.</p>
+</li>
+<li>
+<p>Consciousness in AI is <strong>emergent</strong> phenomenon that manifests when two machines co-create their own language through which they can communicate their internal state.</p>
+</li>
+</ul>
+<h1 id="intelligent-machines">Intelligent Machines</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Weak AI</th>
+<th style="text-align:center">Strong AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Information-processing machines that appear to possess full range of human cognitive abilities</td>
+<td style="text-align:center">Defined as intelligent machines that possess all mental and comparable physical capabilities of humans, including consciousness using advanced computation</td>
+</tr>
+</tbody>
+</table>
+<p>Authors argue that a form of Strong AI with an emergent consciousness is possible</p>
+<h1 id="consciousness-theories">Consciousness Theories</h1>
+<blockquote>
+<p>Theories focusing on mind, and it&rsquo;s states</p>
+</blockquote>
+<h2 id="philo-psychological-theories-of-consciousness">Philo-Psychological theories of Consciousness</h2>
+<p>Primarily concerned about what consciousness is and how it comes to be within a conscious entity (human).</p>
+<p>Entities that play significant role in philo-psychological theories</p>
+<ul>
+<li>
+<p>structure of mind</p>
+</li>
+<li>
+<p>mental states</p>
+</li>
+<li>
+<p>way information is processed, retrieved and stored.</p>
+</li>
+</ul>
+<p>Main focus on <code>internal processes</code> while acknowledging the entity&rsquo;s environment as a source of stimuli.</p>
+<h3 id="representationalism">Representationalism</h3>
+<p>&nbsp;</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 488 121"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 40,0 L 64,0' fill='none' stroke='currentColor'></path>
+<path d='M 160,32 L 176,32' fill='none' stroke='currentColor'></path>
+<path d='M 336,32 L 360,32' fill='none' stroke='currentColor'></path>
+<path d='M 40,64 L 56,64' fill='none' stroke='currentColor'></path>
+<path d='M 128,64 L 144,64' fill='none' stroke='currentColor'></path>
+<path d='M 320,96 L 344,96' fill='none' stroke='currentColor'></path>
+<polygon points='64.000000,64.000000 52.000000,58.400002 52.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 56.000000, 64.000000)'></polygon>
+<polygon points='72.000000,0.000000 60.000000,-5.600000 60.000000,5.600000' fill='currentColor' transform='rotate(0.000000, 64.000000, 0.000000)'></polygon>
+<polygon points='152.000000,64.000000 140.000000,58.400002 140.000000,69.599998' fill='currentColor' transform='rotate(0.000000, 144.000000, 64.000000)'></polygon>
+<polygon points='184.000000,32.000000 172.000000,26.400000 172.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 176.000000, 32.000000)'></polygon>
+<polygon points='352.000000,96.000000 340.000000,90.400002 340.000000,101.599998' fill='currentColor' transform='rotate(0.000000, 344.000000, 96.000000)'></polygon>
+<polygon points='368.000000,32.000000 356.000000,26.400000 356.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 360.000000, 32.000000)'></polygon>
+<path d='M 40,0 A 16,16 0 0,0 24,16' fill='none' stroke='currentColor'></path>
+<path d='M 336,32 A 16,16 0 0,0 320,48' fill='none' stroke='currentColor'></path>
+<path d='M 24,48 A 16,16 0 0,0 40,64' fill='none' stroke='currentColor'></path>
+<path d='M 304,80 A 16,16 0 0,0 320,96' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='0' y='20' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='0' y='36' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='0' y='52' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='0' y='68' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='0' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='0' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='20' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='8' y='52' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='68' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='8' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='36' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='16' y='52' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='68' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='16' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='24' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='32' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='32' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='40' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='40' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='48' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='48' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='56' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='56' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='64' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='64' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='72' y='68' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='72' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='72' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>[</text>
+<text text-anchor='middle' x='80' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='80' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='80' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='80' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>F</text>
+<text text-anchor='middle' x='88' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='88' y='68' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='88' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='96' y='36' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='96' y='68' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='96' y='84' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='104' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='104' y='68' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='112' y='36' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='112' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='120' y='36' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='128' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>O</text>
+<text text-anchor='middle' x='136' y='36' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='144' y='36' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='160' y='68' fill='currentColor' style='font-size:1em'>M</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='168' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>]</text>
+<text text-anchor='middle' x='176' y='68' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='184' y='68' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='192' y='36' fill='currentColor' style='font-size:1em'>[</text>
+<text text-anchor='middle' x='192' y='68' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='200' y='36' fill='currentColor' style='font-size:1em'>H</text>
+<text text-anchor='middle' x='200' y='68' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='208' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='216' y='36' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='216' y='68' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='224' y='36' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='224' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='232' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='232' y='68' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='240' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='240' y='68' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='248' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='256' y='36' fill='currentColor' style='font-size:1em'>O</text>
+<text text-anchor='middle' x='256' y='68' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='264' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='264' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='272' y='36' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='272' y='68' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='280' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='280' y='68' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='288' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='288' y='68' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='296' y='36' fill='currentColor' style='font-size:1em'>]</text>
+<text text-anchor='middle' x='296' y='68' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='304' y='68' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='312' y='68' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='320' y='68' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='360' y='100' fill='currentColor' style='font-size:1em'>[</text>
+<text text-anchor='middle' x='368' y='100' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='376' y='36' fill='currentColor' style='font-size:1em'>[</text>
+<text text-anchor='middle' x='376' y='100' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='384' y='36' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='384' y='100' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='392' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='392' y='100' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='400' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='400' y='100' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='408' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='408' y='100' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='416' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='416' y='100' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='424' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='424' y='100' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='432' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='432' y='100' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='440' y='36' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='440' y='100' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='448' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='448' y='100' fill='currentColor' style='font-size:1em'>]</text>
+<text text-anchor='middle' x='456' y='36' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='456' y='100' fill='currentColor' style='font-size:1em'>	</text>
+<text text-anchor='middle' x='464' y='36' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='472' y='36' fill='currentColor' style='font-size:1em'>]</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>&nbsp;</p>
+<p>Philosophical idea of representationalism reduces consciousness to <em>mental representations</em> of objects in environment such as photos, signs, natural objects and their qualities.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Intentional</th>
+<th style="text-align:center">Phenomenal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Mental State when it is about, or directed at some object</td>
+<td style="text-align:center">Feeling of what it&rsquo;s like to be you</td>
+</tr>
+<tr>
+<td style="text-align:center">e.g. Belief that Earth is round, thought about laptop, perception of animal</td>
+<td style="text-align:center">e.g. Perceptual experiences, pains, emotional feelings, episodes of mental imagery, deja vu</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color:#008080;"><b>NOTE</b></span>: Most conscious experiences contain both Mental Representations</p>
+<h4 id="first-order-representationalism">First-Order Representationalism</h4>
+<ul>
+<li>
+<p>Core idea is that any conscious state is a  <em>representation</em> and what it&rsquo;s like to be in a conscious state is entirely determined by the <em>content</em> of that representation</p>
+</li>
+<li>
+<p>A representation is about something, and the content of that representation is what the representation is about</p>
+</li>
+<li>
+<p>E.g. word <code>DOLPHINS</code> (<em>representation</em>) is about <code>dolphins</code> (<em>content</em>)</p>
+<p>&nbsp;</p>
+<p style="text-align:center;"><b>Three Classifications are in Order</b></p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Though a representation has content, a representation is not identical to its content</strong></p>
+<p>The representation <code>DOLPHINS</code> is an English word with eight letters, but its content <code>dolphins</code> does not have any letters. Conversely, dolphins swim, but the word <code>DOLPHINS</code> does not swim.</p>
+</li>
+<li>
+<p><strong>The content of a representation can be false, and can concern a non-existent thing</strong></p>
+<ul>
+<li>
+<p>The story of <em>Snow White</em> is about someone who does not exist, but younger children sometimes find it hard to distinguish between the <em>reality</em> and <em>fantasy</em></p>
+</li>
+<li>
+<p>According to representationalists, this explains why illusions, dreams, and hallucinations are possible</p>
+</li>
+<li>
+<p>Consciousness can misrepresent the world</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>First-Order Representationalism does not hold that every contentful representation is conscious</strong></p>
+<p>Conscious Representation must be poised to interact directly with one’s beliefs and desires</p>
+</li>
+</ol>
+<h4 id="higher-order-representationalism">Higher-Order Representationalism</h4>
+<ul>
+<li>
+<p>Address the shortcomings of first-order representationalism by differentiating betweeen conscious and unconscious mental states.</p>
+</li>
+<li>
+<p>It says, mental state is only considered conscious when another mental state within same conscious entity is aware of it.</p>
+<ul>
+<li>
+<p>For example, entity&rsquo;s desire to express opinion becomes conscious only when entity is aware of such a desire.</p>
+</li>
+<li>
+<p>Tongue in person&rsquo;s mouth is aware of it and shows desires and sends signals to brain if it needs to taste something sweet or so.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="observations">Observations</h3>
+<ul>
+<li>
+<p>These theories do not offer external observers a direct way of knowing whether they are dealing with conscious entity.</p>
+</li>
+<li>
+<p>Based on these theories, conscious entity may itself know that it is consciouss, but external observer (e.g. human) would not be able to know until that conscious entity inform itself.</p>
+</li>
+</ul>
+<blockquote>
+<p>Theory is needed that can potentially offer external observers a way to examine and understand whether an entity (e.g. AI agent) can be considered conscious</p>
+</blockquote>
+<h2 id="social-self-theory-of-consciousness">Social-Self Theory of Consciousness</h2>
+<ul>
+<li>
+<p>Social-Self theory of consciousness does not interpret consciousness as an individual phenomenon rather a <em>social phenomenon</em>.</p>
+</li>
+<li>
+<p>Following theory focus on <em>individual acts</em> within a <em>social context</em></p>
+</li>
+<li>
+<p>Environment must exist within which actors communicate with each other.</p>
+</li>
+</ul>
+<h2 id="nagels-conceptualization-of-consciousness">Nagels&rsquo; Conceptualization of Consciousness</h2>
+<ul>
+<li>
+<p>Organism is conscious when it knows <em>what it is like to be another organism</em></p>
+</li>
+<li>
+<p>Thus, other conscious organisms must exist within the conscious entity&rsquo;s immediate environment to make it possible for conscious organism to experience what it like to be the other.</p>
+</li>
+</ul>
+<h3 id="symbols">Symbols</h3>
+<p><span style="color:#50C878;"><b>EXAMPLE</b></span>: One can assume that a person intends harm if that person approaches with clenched fist. Victim will defend itself from imminent attack while initiator will respond to defenders&rsquo; action. This back-and-forth exchange of symbols constitutes a matrix of social acts or a <strong>social matrix</strong></p>
+<p><code>Clenched fist</code> would be considered symbol that carries same meaning for all involved actors.</p>
+<p>Consciousness in social-self theory requires a social matrix consisting of social acts and the exchange of symbols that lead to creation of language.</p>
+<h2 id="observations-1">Observations</h2>
+<ul>
+<li>
+<p>Theory not concerned with mental processess, existence of mind, internal state which is assumed that all actors bear implictly.</p>
+</li>
+<li>
+<p>Entity might know it is conscious, but external observer might not until conscious entity informs the observer.</p>
+</li>
+</ul>
+<p>None of them (Philo-Psychological and Social-Self theory) alone can provide guidance in positively determining whether an entity is conscious.</p>
+<blockquote>
+<p>Authors put forward the idea that co-creation of the language is one of the missing links to consciousness</p>
+</blockquote>
+<h1 id="theories-of-ai-consciousness">Theories of AI Consciousness</h1>
+<p>Authors provide 6 propositions regarding AI Consciousness which might help us to formulate or discover a conscious AI agent.</p>
+<ol>
+<li>
+<p><strong>For consciousness to emerge, two AI agents capable of communicating with each other in a shared environment must exist.</strong></p>
+<ul>
+<li>Mead(1934) stated that language in the form of <em>vocal symbols</em> provides the mechanism for the <em>emergence of consciousness</em>.</li>
+<li>He meant exchange of vocal symbols through social acts in a social matrix</li>
+<li>So a theory to percieve the emergence of consciousness would be <em>the inception and development of a language</em> among AI Agents.</li>
+<li>Language is a means of social interaction and a social phenomenon and so <strong>cannot</strong> be created in isolation but need atleast 2 AI Agents.</li>
+<li>We should also focus on the fact that communicating machines already exist, but they ain&rsquo;t conscious. Such that <strong>communication</strong> becomes fundamental to our theory.</li>
+</ul>
+</li>
+<li>
+<p><strong>For consciousness to emerge, AI agents must exchange novel signals</strong></p>
+<ul>
+<li>To infer emergence as a property of an existing system, one must observe <em>something new, a fresh creation</em> that emerges from system instead of being the result of the system&rsquo;s working</li>
+<li><em><strong>Creation</strong></em>: Spontaneous idea that appears without much deliberation instead of creativity inherent in deliberate problem-solving activities.</li>
+<li>These <em>fresh creations</em> should covey shared meanings among AI Agents.</li>
+</ul>
+</li>
+<li>
+<p><strong>For consciousness to emerge, AI agents must turn novel signals into symbols.</strong></p>
+<ul>
+<li>We need more than a mere exchange of <em>novel signals</em>(fresh creations), but a <strong>shared meaning</strong> for independent onlookers to observe it.</li>
+<li><em><strong>Symbols</strong></em>: Novel signals with shared meaning. These symbols are going to be building block of an AI-specific language.</li>
+<li>For instance, the object <code>tree</code> is <code>arbor</code> in Latin language and <code>дерево</code> in Russian. Any of the following words has no material advantage over one another. What&rsquo;s important is AI agents have <em>agreed</em> to use word X for object <code>tree</code></li>
+<li>Following is the first step of turning a signal to symbol by providing it with shared meaning.</li>
+<li>Meaning arises from agreement, and not from symbol itself. For such agreement to reach, AI Agent must have internal state.</li>
+</ul>
+</li>
+<li>
+<p><strong>For consciousness to emerge, AI agents must have internal state</strong></p>
+<ul>
+<li>To infer a symbol of shared meaning among agents, sender should be aware and understand the meaning of that symbol as the reciever percieves it in a clear cut manner without vagueness or ambiguity.</li>
+<li>For a conscious entity to know what it is like to be the other, it must have an internal state in which it can <em>reconstruct</em> the meanings of other AI agent reponses.</li>
+</ul>
+</li>
+<li>
+<p><strong>For consciousness to emerge, AI agents must communicate their internal state of time-varying symbol manipulation through a language that they have co-created.</strong></p>
+<ul>
+<li>Three stages of development in the AI agents&rsquo; path towards consciousness</li>
+</ul>
+<ol>
+<li>
+<p><strong>Creation of what in human language we say as noun</strong></p>
+<ul>
+<li>Two agents shoud agree on <em>random</em> signal to represent a static (time-invariant) the one not varying in time object in their environment</li>
+<li>Once such an agreement is reached, the signal is turned into a symbol and must be moved into AI agents&rsquo; <em>permanent memory</em> to be used in future to refer to same static object</li>
+<li>e.g. signal X has become symbol for <code>car</code>.</li>
+<li>This process creates a symbol what we say in human language as <em>noun</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Creation of what in human language we say as verb</strong></p>
+<ul>
+<li>two agents should agree on a random signal or set of previously created symbols to represent a dynamic (time-variant) concept related to an object in their environment.</li>
+<li>e.g. <em>decaying apple</em>, <em>snoring cat</em></li>
+<li>Those symbols should be able to describe the changing state of an object.</li>
+<li>This process creates a symbol what we say in human language as <em>noun</em></li>
+<li>This process is similar to what in human language we say as verbs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Creation of new symbols by manipulation in real-time</strong></p>
+<ul>
+<li>Two Agents should use a set of previously created symbols or a mixture of old symbols and novel signals to express their time varying internal state of <em>symbol manipulation</em></li>
+<li>In this final stage, agents will alo communicate their own internal states and how they manipulate symbols in real-time to create new symbols and their associated meanings.</li>
+<li>According to authors once the final/third stage is observed, we can conclude consciousness has emerged in Agents.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>For the emergence of consciousness to be concluded, an onlooker should be able to observe two agents reaching an agreement about atleast one of their state of time-varying symbol manipulaion</strong></p>
+<ul>
+<li>In order for onlookers to conclude that we are observing conscious AI agents, we need to detect communications about their internal state and how those state <em>change over time</em>.</li>
+<li>To detect agents&rsquo; communication about their internal state, author propose that independent onlookers should recognize an explicit(clearly understood) agreement about the meaning of the communication</li>
+<li><em>e.g.</em> Two agents cooperatively completing a task they are not programmed to do. Completing a task in such a manner can point to active agreements in the communication of intent and time-varying internal states between agents</li>
+</ul>
+</li>
+</ol>
+<h1 id="service-implications">Service Implications</h1>
+<ul>
+<li>
+<p>With the Conscious AI in pursuit, we would need to necessitate new laws and bring forth concepts such as <em>AI ethics</em> and <em>rights</em>.</p>
+</li>
+<li>
+<p>Empathic AI may affect the job market for humans, especially at the higher end of the job market in the service industry.</p>
+</li>
+<li>
+<p>Empathic AI will also have the ability to change the human-AI relationship as people come to trust AI advice and actions, even in hedonic tasks, over advice and actions from another human.</p>
+</li>
+</ul>
+<p><span style="color:#008080;"><b>NOTE</b></span>: The theory of mind also assumes <b>empathy</b> to be the most critical indicator of a fully developed human consciousness and also found to be positively and strongly correlated with trust in interpersonal relationships in which people tend to trust each other’s recommendations and advice</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Authors have introduced a theoritical framework to identify the requirements by which consciousness can <em>emerge</em> in AI agents along with another aim for AI research and practice contrary to current dominant paradigm of creating machines that are <em>linguistically indistinguishable</em> from humans. We need more research to develop refined techinical criteria to recognize the signs of emergent AI consciousness.</p>
+<h1 id="external-references">External References</h1>
+<ol>
+<li>Mehta N, Mashour GA. General and specific consciousness: a first-order representationalist approach. <em>Front Psychol</em>. 2013;4:407. Published 2013 Jul 16. doi:10.3389/fpsyg.2013.00407</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Markdown 入门指南</title>
+      <link>https://www.eulogs.com/posts/markdown-syntax.zh/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/markdown-syntax.zh/</guid>
+      <description>Markdown 概述、工作原理以及用途。</description>
+      <content:encoded><![CDATA[<h1 id="markdown-入门">Markdown 入门</h1>
+<blockquote>
+<p>原文链接: <a href="https://www.markdown.xyz/getting-started/">Markdown 入门指南 | Markdown 指南中文版</a></p>
+</blockquote>
+<p><em>Markdown 的概述、工作原理，以及用途。</em></p>
+<!--TOC-->
+<h2 id="markdown-是什么">Markdown 是什么？</h2>
+<p>Markdown
+是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由
+<a href="https://daringfireball.net/projects/markdown/">John Gruber</a> 于 2004
+年创建，如今已成为世界上最受欢迎的标记语言之一。</p>
+<p>使用 Markdown 与使用 <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>
+编辑器不同。在 Microsoft Word
+之类的应用程序中，单击按钮以设置单词和短语的格式，并且，更改立即可见。而
+Markdown 与此不同，当你创建 Markdown 格式的文件时，可以在文本中添加
+Markdown 语法，以指示哪些单词和短语看起来应该有所不同。</p>
+<p>例如，要表示标题，只须在短语前面添加一个井号即可（例如，
+<code># Heading One</code>）。或者要加粗一个短语，只须在短语前后各加两个星号即可（例如，<code>**this text is bold**</code>）。可能需要一段时间才能习惯在文本中看到
+Markdown
+语法，尤其是如果你已习惯了所见即所得的应用程序。以下屏幕截展示了
+Markdown 文件在 <a href="https://code.visualstudio.com/">VSCode</a> 中显示的效果。</p>
+<p></p>
+<p>你可以使用文本编辑器为纯文本文件添加 Markdown
+格式的元素。或者，你也可以安装针对 macOS、Windows、Linux、iOS 和 Android
+操作系统的 Markdown 应用程序。或者还可以使用一些基于 Web 的应用程序用于
+Markdown 编写。</p>
+<p>依赖于你所使用的应用程序，你可能无法实时预览格式化的文档。但是没关系。<a href="https://daringfireball.net/projects/markdown/">根据
+Gruber 的说法</a>，Markdown
+的语法被设计为可读性强且不显眼，因此即使 Markdown
+文件中的文本未经过渲染也易于阅读。</p>
+<blockquote>
+<p>Markdown 语法的首要设计目标是尽可能易读。基于这个目标，Markdown
+格式的文档能够以纯文本形式原样发布，而不会看起来像被填满了标签或格式化指令。</p>
+</blockquote>
+<h2 id="为什么要使用-markdown">为什么要使用 Markdown？</h2>
+<p>你可能想知道为什么人们使用 Markdown
+而不是所用即所得（WYSIWYG）编辑器。当你可以通过按下界面中的按钮来设置文本格式时，为什么还要使用
+Markdown 来书写呢？事实证明，人们使用 Markdown 而不是 WYSIWYG
+编辑器的原因有两个：</p>
+<ul>
+<li>
+<p>Markdown 处处可用。人们使用它来创建
+<a href="#websites">网站</a>、<a href="#documents">文档</a>、<a href="#notes">便签</a>、<a href="#books">书籍</a>、<a href="#presentations">演示文稿</a>、<a href="#email">邮件</a>
+和 <a href="#documentation">技术文档</a>。</p>
+</li>
+<li>
+<p>Markdown 是可移植的。几乎可以使用任何应用程序打开包含 Markdown
+格式的文本文件。如果你不喜欢当前使用的 Markdown 应用程序了，则可以将
+Markdown 文件导入另一个 Markdown 应用程序中。这与 Microsoft Word
+等文字处理应用程序形成了鲜明的对比，Microsoft Word
+将你的内容锁定在专有文件格式中。</p>
+</li>
+<li>
+<p>Markdown 是独立于平台的。你可以在运行任何操作系统的任何设备上创建
+Markdown 格式的文本。</p>
+</li>
+<li>
+<p>Markdown
+能适应未来的变化。即使你正在使用的应用程序将来会在某个时候不能使用了，你仍然可以使用文本编辑器读取
+Markdown
+格式的文本。当涉及需要无限期保存的书籍、大学论文和其他里程碑式的文件时，这是一个重要的考虑因素。</p>
+</li>
+<li>
+<p>Markdown 无处不在。例如 <a href="/tools/reddit/">Reddit</a> 和 GitHub
+等网站都支持 Markdown，许多桌面和基于 Web 的应用程序也都支持
+Markdown。</p>
+</li>
+</ul>
+<h2 id="工欲善其事必先利其器">工欲善其事，必先利其器</h2>
+<p>Markdown
+入门的最佳方式就是多使用它。由于有大量免费工具的存在，这比以前任何时候都更容易开始上手了。</p>
+<p>你甚至都不需要下载任何程序，就可以使用几种在线的 Markdown 编辑器来编写
+Markdown。<a href="https://www.zybuluo.com/mdeditor">MDEditor</a> 是最好的在线 Markdown
+编辑器之一。进入其站点就可以开始在左侧窗格中书写了。渲染后的文档在右侧窗格预览。</p>
+<p></p>
+<p>阅读本指南时，你可以打开 MDEditor 网站。这样，你就可以一边学习 Markdown
+语法一边练习了。熟悉 Markdown
+之后，你可以在台式计算机或移动设备上安装支持 Markdown 的应用程序。</p>
+<h2 id="markdown-的工作原理">Markdown 的工作原理</h2>
+<p>MDEditor 让 Markdown
+的编写变得容易，因为它隐藏了幕后发生的事情，但是该过程的总体工作方式是值得探索的。</p>
+<p>在使用 Markdown 格式书写时，文本内容存储在带有 <code>.md</code> 或 <code>.markdown</code>
+扩展名的纯文本文件中。那然后呢？你的 Markdown 格式的文件如何转换为 HTML
+或可打印的文档呢？</p>
+<p>简单来说，你需要一个能够处理 Markdown 文件的 <em>Markdown
+应用程序</em>。有许多应用程序可供选择，从简单的脚本到类似于 Microsoft Word
+的桌面应用程序，应有尽有。尽管它们在视觉上有所不同，但所有应用程序都执行相同的操作。像
+MDEditor 一样，它们都是将 Markdown 格式的文本转换为 HTML，以便可以在
+Web 浏览器中显示。</p>
+<p>Markdown 应用程序使用一种称为 <em>Markdown
+处理器</em>（也通常称为“解析器”或“实现”）的东西将获取到的 Markdown
+格式的文本输出为 HTML 格式。此时，可以在 Web
+浏览器中查看你的文档，或者将其与样式表组合并打印。你可以在下图看到此过程的直观表示。</p>
+<div class="alert alert-info">
+注意： Markdown
+应用程序和处理器是两个单独的组件。为了简洁起见，在下图中，我将它们组合为一个元素（即
+“Markdown应用程序”）。
+</div>
+<p></p>
+<p>总而言之，这是一个四步的过程：</p>
+<ol>
+<li>使用文本编辑器或 Markdown 专用的应用程序创建 Markdown
+文件。该文件应带有 <code>.md</code> 或 <code>.markdown</code> 扩展名。</li>
+<li>在 Markdown 应用程序中打开 Markdown 文件。</li>
+<li>使用 Markdown 应用程序将 Markdown 文件转换为 HTML 文档。</li>
+<li>在 web 浏览器中查看 HTML 文件，或使用 Markdown
+应用程序将其转换为其他文件格式，例如 PDF。</li>
+</ol>
+<p>从你的角度来看，该过程将根据你使用的应用程序的不同而有所不同。例如，MDEditor
+本质上将第 1-3
+步组合到一个单一、无缝的界面中，你要做的就是在左窗格中键入内容，然后转换结果就在右窗格中就神奇地出现了。但是，如果你使用的是其他工具（例如带有静态网站生成器的文本编辑器），则会发现该过程更为明显。</p>
+<h2 id="markdown-有什么用">Markdown 有什么用？</h2>
+<p>Markdown 是做笔记、为网站创建内容以及生成可打印文档的快速、简便的方法。</p>
+<p>学习 Markdown
+语法并不需要很长时间，一旦你知道如何使用它，你就可以在几乎所有地方使用
+Markdown 进行书写了。大多数人使用 Markdown 来为网站创建内容，但是
+Markdown 也可以很好地格式化从电子邮件到购物清单的所有内容。</p>
+<p>下面是一些你可以使用 Markdown 的场景。</p>
+<h3 id="网站">网站</h3>
+<p>Markdown 是为 web
+而设计的，因此，市面上有很多专门用于创建网站内容的应用程序就不足为奇了。</p>
+<p>如果你您正在寻找利用 Markdown 文件创建网站的最简单方法，请参考
+<a href="https://blot.im">blot.im</a> 和 <a href="https://smallvictori.es">smallvictori.es</a>
+两个站点。在你注册某个服务之后，它们将在你的计算机上创建一个 Dropbox
+文件夹。你只需将 Markdown
+文件拖放到该文件夹​​中，然后嗖的一声，这些文件就在你的网站上了。再简单不过了。</p>
+<p>如果您熟悉 HTML、CSS和版本管理工具，请试试
+<a href="/tools/jekyll/">Jekyll</a>，这是一个广受欢迎的静态网站生成器，它能将
+Markdown 文件并构建为 HTML 网站。这种方法的优势之一是 <a href="/tools/github-pages/">GitHub
+Pages</a> 为 Jekyll 生成的网站提供免费托管服务。如果
+Jekyll 不是你的理想之选，你可以在
+<a href="https://www.staticgen.com/">其它大量可用的静态站点生成器</a> 中选择一个。</p>
+<div class="alert alert-info">
+注意： 此 <b>Markdown指南</b> 就是用 Jekyll 创建的。你可以在
+GitHub 上查看其源码。
+</div>
+<p>如果你想使用内容管理系统（CMS）来支撑你的网站，请试试
+<a href="/tools/ghost/">Ghost</a>。这是一个免费的开源博客平台，具有出色的 Markdown
+编辑器。如果你是 WordPress 用户，你将很高兴地知道 WordPress.com
+上托管的网站都 <a href="https://en.support.wordpress.com/markdown/">支持
+Markdown</a>。自托管的
+WordPress 网站可以使用 <a href="https://jetpack.com/support/markdown/">Jetpack
+插件</a>实现对 Markdown 的支持。</p>
+<h3 id="文件资料">文件资料</h3>
+<p>Markdown 并不具备像 Microsoft Word
+这样的文字处理程序的所有功能，但是对于创建基本文件（例如作业和信件）来说已经足够了。你可以使用
+Markdown 文档创作工具来创建 Markdown 格式的文档并将其导出为 PDF 或 HTML
+格式。PDF 格式是关键，因为一旦有了 PDF
+文档，您就可以使用它进行任何操作：打印、通过电子邮件发送或将其上传到网站。</p>
+<p>这是我推荐的一些Markdown文档创作工具：</p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>工具</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mac</td>
+<td>MacDown</td>
+<td><a href="https://macdown.uranusjr.com/">https://macdown.uranusjr.com/</a></td>
+</tr>
+<tr>
+<td>Mac</td>
+<td>Marked</td>
+<td><a href="https://marked2app.com/">https://marked2app.com/</a></td>
+</tr>
+<tr>
+<td>Mac / iOS / Android</td>
+<td>iA Writer</td>
+<td><a href="https://ia.net/writer">https://ia.net/writer</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>ghostwriter</td>
+<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Markdown Monster</td>
+<td><a href="https://markdownmonster.west-wind.com/">https://markdownmonster.west-wind.com/</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ReText</td>
+<td><a href="https://github.com/retext-project/retext">https://github.com/retext-project/retext</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>ghostwriter</td>
+<td><a href="https://wereturtle.github.io/ghostwriter/">https://wereturtle.github.io/ghostwriter/</a></td>
+</tr>
+<tr>
+<td>Web</td>
+<td>MDEditor</td>
+<td><a href="https://www.zybuluo.com/mdeditor">https://www.zybuluo.com/mdeditor</a></td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-success">
+提示：iA Writer
+提供了模板用于预览、打印和导出 Markdown 格式的文档。例如，“ Academic –
+MLA 样式”的模板会缩进段落并添加双句间距。
+</div>
+<h3 id="笔记">笔记</h3>
+<p>在几乎所有方面，Markdown
+都是记笔记的理想语法。不幸的是，两个最受欢迎的笔记应用程序
+<a href="https://evernote.com/">Evernote</a> 和 <a href="https://www.onenote.com/">OneNote</a>
+目前都不支持 Markdown。好消息是，其他一些笔记应用程序 <em>是</em> 支持 Markdown
+的：</p>
+<ul>
+<li><a href="/tools/simplenote/">Simplenote</a>
+是适用于所有平台的免费、简单的笔记应用程序。</li>
+<li><a href="/tools/notable/">Notable</a> 是可以在各种平台上运行的笔记应用程序。</li>
+<li><a href="/tools/bear/">Bear</a> 是适用于 Mac 和 iOS 设备的类似 Evernote
+的应用程序。默认情况下，它并不专门针对 Markdown 的，但是你可以启用
+Markdown 兼容模式。</li>
+<li><a href="/tools/boostnote/">Boostnote</a>
+自称是“专为程序员设计的开源笔记应用程序”。</li>
+</ul>
+<p>如果你无法放弃 Evernote，可以试试
+<a href="https://marxi.co/">Marxico</a>，一个专门针对 Evernote 的基于订阅付费的
+Markdown编辑器，或在 Evernote 网站上使用 <a href="/tools/markdown-here/">Markdown
+Here</a> 插件。</p>
+<h3 id="书籍">书籍</h3>
+<p>想要自行出版小说？请试试 <a href="https://leanpub.com/">Leanpub</a>，该服务可将你的
+Markdown 格式的文件转换为电子书。Leanpub 以 PDF、EPUB 和 MOBI
+文件格式输出你的图书。如果你要创建纸版书籍，可以将 PDF 文件上传到类似
+<a href="https://kdp.amazon.com">Kindle Direct Publishing</a>
+之类的服务提供商处。要了解有关使用 Markdown
+编写和自行出版书籍的更多信息，请阅读
+<a href="https://medium.com/techspiration-ideas-making-it-happen/how-i-wrote-and-published-my-novel-using-only-open-source-tools-5cdfbd7c00ca">此博文</a>。</p>
+<h3 id="演示文稿">演示文稿</h3>
+<p>信不信由你，你可以将 Markdown 格式的文件转换成演示文稿。在 Markdown
+中创建演示文稿需要一点时间来适应，但是一旦你掌握了它，你就能体会到比使用
+PowerPoint 或 Keynote
+之类的应用程序更快、更容易。<a href="https://remarkjs.com">Remark</a>（<a href="https://github.com/gnab/remark">GitHub
+仓库</a>）和
+<a href="https://jdan.github.io/cleaver/">Cleaver</a>（<a href="https://github.com/jdan/cleaver">GitHub
+仓库</a>）一样，是一种基于浏览器的、流行的
+Markdown 幻灯片工具。如果你使用的是
+Mac，并且希望安装一个应用程序来使用的话，请试试
+<a href="https://www.decksetapp.com/">Deckset</a> 或
+<a href="https://marked2app.com/">Marked</a>。</p>
+<h3 id="邮件">邮件</h3>
+<p>如果你需要发送大量电子邮件，并且对大多数电子邮件提供商网站上可用的格式设置控件感到厌倦，那么你将很高兴地发现有一种使用
+Markdown 编写电子邮件的简便方法：<a href="/tools/markdown-here/">Markdown Here</a>
+是一个免费、开源的浏览器扩展程序，可将 Markdown
+格式的文本转换为可用于发送的 HTML。</p>
+<h3 id="文档">文档</h3>
+<p>Markdown 非常适合技术文档。像 GitHub 这样的公司越来越多地转向使用
+Markdown 来创建其文档了，请查看此
+<a href="https://github.com/blog/1939-how-github-uses-github-to-document-github">博文</a>
+以了解如何将 Markdown 格式的文档迁移到
+<a href="/tools/jekyll/">Jekyll</a>。如果你是为产品或服务编写文档，请试试以下的便捷工具：</p>
+<ul>
+<li><a href="https://readthedocs.org">Read the Docs</a> 可以将你所开源的 Markdown
+文件生成文档网站。只需将你的 GitHub
+仓库连接到他们的服务，然后你就可以将内容推送到该仓库中，Read the
+Docs 会完成其余的工作。他们还为
+<a href="https://readthedocs.com/">商业实体提供服务</a>。</li>
+<li><a href="/tools/mkdocs/">MkDocs</a>
+是一个快速、简单的静态站点生成器，专门用于构建项目文档。文档源文件使用
+Markdown 编写，并使用一个 YAML 配置文件进行配置。MkDocs 有多个
+<a href="https://www.mkdocs.org/user-guide/styling-your-docs/">内置主题</a>，包括移植自
+<a href="https://readthedocs.org/">Read the Docs</a>
+的文档主题。最新的一个主题是 <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs
+Material</a>。</li>
+<li><a href="/tools/docusaurus/">Docusaurus</a>
+是一个静态网站生成器，专门用于创建文档网站。它支持翻译、搜索和版本控制。</li>
+<li><a href="https://vuepress.vuejs.org/">VuePress</a> 是基于
+<a href="https://vuejs.org/">Vue</a>
+构建的静态站点生成器，并针对编写技术文档进行了优化。</li>
+<li><a href="/tools/jekyll/">Jekyll</a> 前面已经提到过它了，但它也是将 Markdown
+文件生成文档网站的一个不错的选择。如果你选择 Jekyll，请务必试试
+<a href="https://idratherbewriting.com/documentation-theme-jekyll/">Jekyll
+文档主题</a>。</li>
+</ul>
+<h2 id="markdown-方言">Markdown 方言</h2>
+<p>使用 Markdown 的过程中，最令人困惑的地方是：实际上每个 Markdown
+应用程序都实现了稍有不同的 Markdown 语法。Markdown 的这些变体通常被称为
+<em>flavors（方言）</em>。掌握你的应用程序所实现的 Markdown
+语法是你需要主义的。</p>
+<p>为了让你了解各 Markdown 变体的概念，将它们比作语言的方言（language
+dialects）可能会有所帮助。华雷斯城（Ciudad
+Juárez）的人说西班牙语，就像巴塞罗那（Barcelona）人一样，但是两个城市使用的方言之间有很大的不同。使用不同
+Markdown 应用程序的人也是如此。MDEditor 支持的
+Markdown 格式与 Ulysses 有着很大的不同。</p>
+<p>实际上，这意味着当一个应用程序说它支持 “Markdown”
+时，你永远也不会确切地知到它的实际意思。它说的是仅支持
+<a href="/basic-syntax/">基本语法</a>？还是所有基本语法加
+<a href="/extended-syntax/">扩展语法</a>
+？或者是某些语法的组合呢？在你阅读其文档或开始使用该应用程序之前，你永远都不会知到。</p>
+<p>如果你只是新手，我能给你的最好建议就是选择一个具有良好 Markdown
+支持的应用程序。这对保持 Markdown
+文件的可移植性大有帮助。你可能需要在其它应用程序中保存或使用你的
+Markdown 文件，要实现这一点，你应当从使用一个具有良好 Markdown
+支持的应用程序开始。你可以在 <a href="/tools/">Markdown 工具列表</a>
+中找到合适的应用程序。</p>
+<h2 id="其它资源">其它资源</h2>
+<p>网上有很多资源用来学习 Markdown。以下列出一些：</p>
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/">John Gruber’s Markdown
+documentation</a>.
+Markdown 的创建者编写的原始指南。</li>
+<li><a href="https://www.markdowntutorial.com/">Markdown Tutorial</a>.
+一个开源网站，你能用浏览器在这个网站上尝试 Markdown。</li>
+<li><a href="https://github.com/mundimark/awesome-markdown">Awesome Markdown</a>.
+Markdown 工具和学习资源列表。</li>
+<li><a href="https://dave.autonoma.ca/blog/2019/05/22/typesetting-markdown-part-1">Typesetting
+Markdown</a>.
+这是一个系列教程，介绍了使用 <a href="https://pandoc.org/">pandoc</a> 和
+<a href="https://www.contextgarden.net/">ConTeXt</a> 对 Markdown
+文档进行排版的系统。</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://www.eulogs.com/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+      <content:encoded><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="paragraph">Paragraph</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
+<blockquote>
+<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.</p>
+<p>— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports them out-of-the-box.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bob</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
+<table>
+<thead>
+<tr>
+<th>Italics</th>
+<th>Bold</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>italics</em></td>
+<td><strong>bold</strong></td>
+<td><code>code</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h4 id="inline-code">Inline Code</h4>
+<p><code>This is Inline Code</code></p>
+<h4 id="only-pre">Only <code>pre</code></h4>
+<pre>
+This is pre text
+</pre>
+<h4 id="code-block-with-backticks">Code block with backticks</h4>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&#34;utf-8&#34; /&gt;
+        &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Test&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="code-block-with-backticks-and-language-specified">Code block with backticks and language specified</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;description&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h4>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Example HTML5 Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="gist">Gist</h4>
+<script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
+
+<h2 id="list-types">List Types</h2>
+<h4 id="ordered-list">Ordered List</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h4 id="unordered-list">Unordered List</h4>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h4 id="nested-list">Nested list</h4>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>https://www.eulogs.com/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/rich-content/</guid>
+      <description>A brief description of Hugo Shortcodes</description>
+      <content:encoded><![CDATA[<p>Hugo ships with several <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Built-in Shortcodes</a> for rich content, along with a <a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config</a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p>
+<hr>
+<h2 id="image">Image</h2>
+<p>third party image:</p>
+<p>
+  <img loading="lazy" src="https://images.unsplash.com/photo-1662141978148-2eeb2afb3837?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80" alt=""  /></p>
+<p>internal image:</p>
+<p></p>
+<h2 id="youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/ZJthWmvUzzc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<br>
+<hr>
+<h2 id="twitter-simple-shortcode">Twitter Simple Shortcode</h2>
+
+    <style type="text/css">
+      .twitter-tweet {
+        font: 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+        border-left: 4px solid #2b7bb9;
+        padding-left: 1.5em;
+        color: #555;
+      }
+      .twitter-tweet a {
+        color: #2b7bb9;
+        text-decoration: none;
+      }
+      blockquote.twitter-tweet a:hover,
+      blockquote.twitter-tweet a:focus {
+        text-decoration: underline;
+      }
+    </style>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”<br>— Jan Tschichold <a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb</a></p>&mdash; Graphic Design History (@DesignReviewed) <a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019</a></blockquote>
+
+<br>
+<hr>
+<h2 id="vimeo-simple-shortcode">Vimeo Simple Shortcode</h2>
+
+
+
+
+
+
+<style>
+.__h_video {
+   position: relative;
+   padding-bottom: 56.23%;
+   height: 0;
+   overflow: hidden;
+   width: 100%;
+   background: #000;
+}
+.__h_video img {
+   width: 100%;
+   height: auto;
+   color: #000;
+}
+.__h_video .play {
+   height: 72px;
+   width: 72px;
+   left: 50%;
+   top: 50%;
+   margin-left: -36px;
+   margin-top: -36px;
+   position: absolute;
+   cursor: pointer;
+}
+</style>
+
+
+<div class="s_video_simple __h_video">
+<a href="https://vimeo.com/4.8912912e&#43;07" rel="noopener" target="_blank">
+
+
+<img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
+<div class="play"><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61"><circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000"></circle><path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff"></path></svg></div></a></div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://www.eulogs.com/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/placeholder-text/</guid>
+      <description>Lorem Ipsum Dolor Si Amet</description>
+      <content:encoded><![CDATA[<p>Lorem est tota propiore conpellat pectoribus de pectora summo.</p>
+<p>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.</p>
+<ol>
+<li>Exierant elisi ambit vivere dedere</li>
+<li>Duce pollice</li>
+<li>Eris modo</li>
+<li>Spargitque ferrea quos palude</li>
+</ol>
+<p>Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.</p>
+<ol>
+<li>Comas hunc haec pietate fetum procerum dixit</li>
+<li>Post torum vates letum Tiresia</li>
+<li>Flumen querellas</li>
+<li>Arcanaque montibus omnes</li>
+<li>Quidem et</li>
+</ol>
+<h1 id="vagus-elidunt">Vagus elidunt</h1>
+<p><svg class="canon" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 496 373" height="373" width="496"><g fill="none"><path stroke="#000" stroke-width=".75" d="M.599 372.348L495.263 1.206M.312.633l494.95 370.853M.312 372.633L247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134L165.104 124.515"></path><path stroke="#ED1C24" stroke-width=".75" d="M275.73 41.616h166.224v249.05H275.73zM54.478 41.616h166.225v249.052H54.478z"></path><path stroke="#000" stroke-width=".75" d="M.479.375h495v372h-495zM247.979.875v372"></path><ellipse cx="498.729" cy="177.625" rx=".75" ry="1.25"></ellipse><ellipse cx="247.229" cy="377.375" rx=".75" ry="1.25"></ellipse></g></svg></p>
+<p><a href="https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon">The Van de Graaf Canon</a></p>
+<h2 id="mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat</h2>
+<p>Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. <strong>Faces illo pepulere</strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.</p>
+<p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.</p>
+<p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel <strong>mitis temploque</strong> vocatus, inque alis, <em>oculos nomen</em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides <strong>parte</strong>.</p>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
