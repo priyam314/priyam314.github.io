@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Shortcut Learning on Eulogs</title>
-    <link>https://www.eulogs.com/categories/shortcut-learning/</link>
-    <description>Recent content in Shortcut Learning on Eulogs</description>
+    <title>Dataset-Difficulty on Eulogs</title>
+    <link>https://www.eulogs.com/tags/dataset-difficulty/</link>
+    <description>Recent content in Dataset-Difficulty on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 23:13:25 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/categories/shortcut-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 23:13:25 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/dataset-difficulty/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shortcut Learning: Belief trap of Deep Neural Networks</title>
       <link>https://www.eulogs.com/posts/shortcut-learning/</link>

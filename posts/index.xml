@@ -8,13 +8,51 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Mar 2023 23:13:25 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Shortcut Learning</title>
+      <title>Shortcut Learning: Belief trap of Deep Neural Networks</title>
       <link>https://www.eulogs.com/posts/shortcut-learning/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
       <guid>https://www.eulogs.com/posts/shortcut-learning/</guid>
-      <description>Desc Text.</description>
-      <content:encoded><![CDATA[<blockquote>
+      <description>Is your neural network really learning what you intend it to learn? Pressing attention of researchers around the world is required to tackle the common enemy of shortcut learning</description>
+      <content:encoded><![CDATA[<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.definition {
+	background-color: #e1f1fd;
+	border-left: 6px solid #72A0C1;
+	color: #41424C;
+}
+.important{
+	background-color: #FFFFE0;
+	border-left:6px solid #FFDF00;
+	color: #41424C;
+}
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+  color: #666666;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #04AA6D;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+</style>
+<blockquote>
 <p>Life is not complex. We are complex. Life is simple, and the simple thing is the right thing.</p>
 <p>-<cite>Oscar Wilde</Cite></p>
 </blockquote>
@@ -89,13 +127,13 @@
 <p>After the model has been trained on the train set, its been tested on i.i.d subset where location of classes seemed to have not changed. Because of which Neural Network model were able to classify them correcty. But, why location? why not shape?. For that we used o.o.d subset in which we changed the location of classes and neural network model failed to classify it correctly. If it would be learning the classification on the basis of shapes which is <em>intended feature</em> then it would have answerd correctly. Wrong classification shows that it learned the location of classes in order to classify which is <em>spurious feature</em>.</p>
 <h2 id="where-do-these-shortcuts-come-from">Where do these shortcuts come from?</h2>
 <h3 id="principle-of-least-effort">Principle of Least Effort</h3>
-<p>Phenomenon of &ldquo;<em>Principle of Least Effort</em>&rdquo; came from the field of lingustics where speakers tend to minimize the amount of effort involved in communication. E.g. speaking &ldquo;plane&rdquo; instead of &ldquo;airplane&rdquo;, merging &ldquo;p&rdquo; and &ldquo;b&rdquo; in &ldquo;cupboard&rdquo;. Related analysis has already been done in <a href="#morgans-canon-for-machine-learning">Morgans&rsquo; Canon</a>, <a href="#monitoring-early-training-dynamics">Monitoring Early Training Dynamics</a>.</p>
+<p>Phenomenon of &ldquo;<em>Principle of Least Effort</em>&rdquo; came from the field of lingustics where speakers tend to minimize the amount of effort involved in communication. E.g. speaking &ldquo;plane&rdquo; instead of &ldquo;airplane&rdquo;, merging &ldquo;p&rdquo; and &ldquo;b&rdquo; in &ldquo;cupboard&rdquo;. Related analysis can be found in <a href="#morgans-canon-for-machine-learning">Morgans&rsquo; Canon</a>, <a href="#monitoring-early-training-dynamics">Monitoring Early Training Dynamics</a>.</p>
 <h3 id="skewed-training-dataset">Skewed Training Dataset</h3>
-<p>Today we mostly use crowd-sourcing platforms like Amazon Mechanical Turk for labeling in vision data, annotating in language data etc for its low cost and scalability. But this comes with its&rsquo; own price of biases and artifacts due to collection bias. Since labelling and annotating datapoints are not done by single entity, this entails individual biases from annotators. E.g. in NLI task, annotators have usually written contradiction by using <span style="color:#40B5AD"><em>not</em></span> and this created a spurious feature for language model to base its predictions on. Now these annotations are not wrong, but we need robust models to handle this type of bias.</p>
+<p>Today we mostly use crowd-sourcing platforms like Amazon Mechanical Turk for labeling in vision data, annotating in language data etc for its low cost and scalability. But this comes with its&rsquo; own price of biases and artifacts due to collection bias. Since labelling and annotating datapoints are not done by single entity, this entails individual biases from annotators. For e.g. in NLI task, annotators have usually written contradiction by using <span style="color:#40B5AD"><em>not</em></span> and this created a spurious feature for language model to base its predictions on. Now these annotations are not wrong, but we need robust models to handle this type of bias.</p>
 <h3 id="neural-network-models">Neural Network Models</h3>
-<p>In LLMs its been seen that two factors are important in order to determine the models&rsquo; robustness. 1. Model Size, 2. Pre-training objective<br/></p>
+<p>In LLMs its been seen that two factors are important in order to determine the models&rsquo; robustness. (1) Model Size (2) Pre-training objective<br/></p>
 <h4 id="model-size">Model Size</h4>
-<p>Model size is measured by number of parameters while keeping the kind of architecture and pre-training objective same. Now generalization ability is measured by the performance of model on o.o.d dataset. Its been shown that generalization ability of larger models are better than those of smaller ones, also smaller models are prone to capture spurious features and more dependent on data artifacts for prediction [<a href="#5">5</a>]. E.g. BERT-large will generalize better than BERT-base. Following this we can also talk about <b>model compression</b>, a theoritical perspective has shed some light by showing that there is a tradeoff between size of model and robustness[<a href="7">7</a>]. Empirically its also been found that compressing the LLM abates the robustness and especially the models that have been compressed using knowledge distillation are more vulnerable to adversarial attacks.</p>
+<p>Model size is measured by number of parameters while keeping the kind of architecture and pre-training objective same. Now generalization ability is measured by the performance of model on o.o.d dataset. Its been shown that generalization ability of larger models are better than those of smaller ones, also smaller models are prone to capture spurious features and more dependent on data artifacts for prediction [<a href="#5">5</a>]. For e.g. BERT-large will generalize better than BERT-base. Following this we can also talk about <b>model compression</b>, a theoritical perspective has shed some light by showing that there is a tradeoff between size of model and robustness[<a href="7">7</a>]. Empirically its also been found that compressing the LLM reduces the robustness and especially the models that have been compressed using knowledge distillation are more vulnerable to adversarial attacks.</p>
 <h4 id="pre-training-objectives">Pre-training Objectives</h4>
 <p>Lets&rsquo; take 3 kinds of LLMs: BERT, ELECTRA, and RoBERTa,. Now for Adversarial NLI dataset, ELECTRA and RoBERTa have better performance than BERT. Similarly, its&rsquo; been shown that RoBERTa-base outperformed BERT-base on HANS test by 20%. Also empirical evidence show that above three models have different levels of robustness most probably because of inductive bias as pre-training objective.</p>
 <h3 id="dataset-bias">Dataset Bias</h3>
@@ -109,7 +147,7 @@
 <p>Slight changes in the translation, rotation, adding noise, changing background of the object in the image has shown to derail the predictions of DNNs. Models learn shortcuts that are inherent to the distribution of the dataset because of which these models do not perform well when used as transfer learning. Since they have learned the representations which will only work in limited capability under <em>distribution shift</em>. Tiny invisible changes to human eye in the images can alter the predictions of neural network by great margin. This is an example of <em>Adversarial Learning</em> which is one of the most severe failure cases of neural networks[<a href="#1">1</a>]</p>
 <h3 id="natural-language-processing">Natural Language Processing</h3>
 <p>Studies have found that Large Language Models (LLMs) are vulnerable to adversarial attacks and have low generalization power[<a href="#5">5</a>]. Empirical Analysis shows that BERT-like models base their performance of Natural Language Inference (NLI) task on some spurious features like unigrams <span style="color:#40B5AD"><em>not</em></span>, <span style="color:#40B5AD"><em>do</em></span>, <span style="color:#40B5AD"><em>is</em></span> and bigrams <span style="color:#40B5AD"><em>will not</em></span>. Some models were relying on lexical matching of words between question and original passage in reading comprehension task, which tend to ignore the understanding of comprehension. Natural Language Understanding (NLU) dataset contains artifacts and biases, due to which LLMs using training strategy of Empirical Risk Minimization (ERM) have learned to rely on spurious correlations of them and class labels.</p>
-<p>Now features learned by the model can be broadly classified into three categories: 1. Useless Features 2. Non-robust Features 3. Robust Features. Shortcut Learning can also be understood as a phenomenon that rely highly on non-robust features. These type of features are aligned with biases in training data. Below figure may help in providing better understanding at it.</p>
+<p>Now features learned by the model can be broadly classified into three categories: (1) Useless Features (2) Non-robust Features (3) Robust Features. Shortcut Learning can also be understood as a phenomenon that rely highly on non-robust features. These type of features are aligned with biases in training data. Below figure may help in providing better understanding at it.</p>
 <figure>
     <img loading="lazy" src="/ShortcutLearning/featureGroups.png"/> 
 </figure>
@@ -161,17 +199,17 @@
 </blockquote>
 <p>The following quote also applies to Deep Neural Networks except they consume data and then base their prediction. Every preceding datapoint affect the prediction of sucessive sample in dataset. Instance Attribution methods are useful in predicting the data samples that contributed more to the models&rsquo; prediction performance for particular instance/datapoint. Empirical analysis indicates that the most influential training data share similar artifacts e.g. high overlapping bias between <em>premise</em> and <em>hypothesis</em> for NLI task.</p>
 <h3 id="morgans-canon-for-machine-learning">Morgans&rsquo; Canon for Machine Learning</h3>
-<blockquote>
-<p><b>Anthromorphism</b></p>
-<p><em>The tendency of humans to attribute human-like psychological characterstics to non-humans on the basis of insufficient empirical evidence</em></p>
-</blockquote>
+<div class="definition">
+    <strong>Anthromorphism</strong> </br>
+    <em>The tendency of humans to attribute human-like psychological characterstics to non-humans on the basis of insufficient empirical evidence</em>
+</div>
 <p>Psychologist Lloyd Morgon developed a guideline for interpreting non-human behaviour in response to the fallacy of Anthromorphism.</p>
 <p><b>Morgons&rsquo; Canon</b> says that &ldquo;<em>In no case is an animal activity to be interpreted in terms of higher psychological processes if it can be fairly interpreted in terms of processes which stand lower on the scale of psychological evolution and development</em>&rdquo;</p>
 <p>Simple correlation would be considered low on psychological scale than scene understanding. Morgons&rsquo; canon in terms of machine learning can then be &ldquo;<em>Never attribute to high-level abilities that which can be adequately explained by shortcut learning</em>&rdquo;</p>
 <p>Morgons&rsquo; canon can also be understood as Occams&rsquo; Razor that says &ldquo;<em>It is futile to do with more what can be done with fewer</em>&rdquo;. A small patch added to image at certain location for all the images of the class is enough for the model to base its predictions and, complex objects and textures of say some animal would not even be needed for it to classify.</p>
 <h3 id="monitoring-early-training-dynamics">Monitoring Early Training dynamics</h3>
 <p>Up until now, community has viewed shortcut learning as a distribution shift problem, but [<a href="#2">2</a>] formalized the guideline of Morgons&rsquo; Canon to show difficulty of spurious feature is equally important in order to understand or identify shortcuts. They argued that it can be captured by monitoring early training dynamics, think of monitoring training dynamics as observing the changes of neural network predictions, maybe weights or any likewise insight during the course of training.</p>
-<p>Premises that support the <cite>hypothesis</cite>: &ldquo;Not all spurious features are shortcuts, but only the ones that are easy to learn&rdquo;</p>
+<p>Premises that support the <cite>hypothesis</cite>: &ldquo;Difficulty of spurious features is important for shortcut learning&rdquo;</p>
 <ol>
 <li>Shortcuts are only those spurious features that are <em>easier</em> to learn than the intended features.</li>
 <li>Initial layers of DNN learn easy features or low level features, whereas later layers tend to learn harder ones or high level features.</li>
@@ -208,7 +246,11 @@
 we are only concerned with easy features (\(I\)) rather than hard features, since spurious features are easier to learn. So \(L \land H\) can be removed from above equation.<br/></p>
 <p>then, \(p_{1} \land p_{2} \land p_{3} = S \land I \land E\)<br/>
 This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learned by initial layers early during training</em>&rdquo;</p>
-<p>Now we need to define the notion of task difficulty(\(\Psi\)) which actually depends on model and data distribution (\(X, y\)) where \(X\) is input and \(y\) is label. Then \(\Psi_{M}^{P}(X \rightarrow y)\) indicates difficulty of predicting label \(y\) given input \(X\) for model \(M\) and some distribution \(P\), where \(X, y \sim P\). Spurious feature \(s\) is potential shortcut for model \(M\) iff \(\Psi_{M}^{P_{tr}}(X \rightarrow y) &gt; \Psi_{M}^{P_{tr}}(X \rightarrow s)\). Which means, difficulty of predicting spurious feature \(s\) is easier than predicting label \(y\) for model \(M\) for a training distribution \(P_{tr}\). But what does it mean to <span style="color:#C34A2C;">predict spurious feature</span>? <span style="color:#40B5AD">Labels are the true predictions for an input, and model can learn to output these true predictions either by learning intended features or spurious features. So predicting spurious features means correctly predicting the input using spurious features.</span></p>
+<p>Now we need to define the notion of task difficulty(\(\Psi\)) which actually depends on model and data distribution (\(X, y\)) where \(X\) is input and \(y\) is label. Then \(\Psi_{M}^{P}(X \rightarrow y)\) indicates difficulty of predicting label \(y\) given input \(X\) for model \(M\) and some distribution \(P\), where \(X, y \sim P\). Spurious feature \(s\) is potential shortcut for model \(M\) iff \(\Psi_{M}^{P_{tr}}(X \rightarrow y) &gt; \Psi_{M}^{P_{tr}}(X \rightarrow s)\). Which means, difficulty of predicting spurious feature \(s\) is easier than predicting label \(y\) for model \(M\) for a training distribution \(P_{tr}\).</p>
+<div class="important">
+	<strong>What does it mean to predict spurious features?</strong> </br>
+	Labels are the true predictions for an input, and model can learn to output these labels either by learning intended features or spurious features. So predicting spurious features means correctly predicting the input using spurious features.
+</div>
 <p>But how would we measure the task difficulty? using two metrics <cite>Prediction Depth</cite> and \(\nu\)-<cite>Usable Information</cite>. <b>Prediction Depth</b> of an input is <em>defined as minimum number of layers required by the model to classify the input</em>. \(\mathit{\boldsymbol{\nu}}\)<b>-Usable Information</b> is defined as <em>amount of usable information in some input </em> \(X\)<em> that can be used by model to predict</em> \(y\), higher the usable information easier the dataset or datapoint/sample is.</p>
 <p>We are close to the end of this section, hold tight. Now consider two datasets \(D_{s} \sim P_{tr}(X, y)\) with spurious features and \(D_{i} \sim P_{te}(X, y)\) without spurious features. Taking some assumptions in Prediction Depth (PD) if mean PD of \(D_{s}\) is less than mean PD of \(D_{i}\) then \(\nu\)-Usable Information for \(D_{s}\) is higher than for \(D_{i}\). In such scenerio model will tend to learn spurious features than intended ones. And this can help to identify spurious features.</p>
 <figure>
