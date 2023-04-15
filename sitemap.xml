@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.eulogs.com/categories/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/condition_number/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/condition-number/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/numerical-analysis/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/</loc>
+    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+  </url><url>
     <loc>https://www.eulogs.com/tags/adversarial-learning/</loc>
     <lastmod>2023-03-31T23:13:25+05:30</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/categories/</loc>
-    <lastmod>2023-03-31T23:13:25+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/tags/dataset-difficulty/</loc>
-    <lastmod>2023-03-31T23:13:25+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/</loc>
     <lastmod>2023-03-31T23:13:25+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/tags/explainability-ai/</loc>
@@ -20,16 +35,10 @@
     <loc>https://www.eulogs.com/tags/out-of-distribution-data/</loc>
     <lastmod>2023-03-31T23:13:25+05:30</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/posts/</loc>
-    <lastmod>2023-03-31T23:13:25+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/categories/shortcut-learning/</loc>
     <lastmod>2023-03-31T23:13:25+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/posts/shortcut-learning/</loc>
-    <lastmod>2023-03-31T23:13:25+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/tags/</loc>
     <lastmod>2023-03-31T23:13:25+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/tags/ai-agents/</loc>
