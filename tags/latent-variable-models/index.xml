@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Latent Variable Models on Eulogs</title>
+    <link>https://www.eulogs.com/tags/latent-variable-models/</link>
+    <description>Recent content in Latent Variable Models on Eulogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Apr 2023 07:45:46 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/latent-variable-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative Modelling: Stormbreaker 🪓 in AI world</title>
+      <link>https://www.eulogs.com/posts/generative-modelling/</link>
+      <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
+      <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
+      <content:encoded><![CDATA[<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+.Example {
+    background-color: #DCDCDC;
+    border-left: 6px solid #696969;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Theoram {
+	background-color: #E9FFDB;
+	border-left: 6px solid #4C9A2A;
+	color: #41424C;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Definition {
+	background-color: #e1f1fd;
+	border-left: 6px solid #72A0C1;
+	color: #41424C;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Important{
+	background-color: #FFFFE0;
+	border-left:6px solid #FFDF00;
+	color: #41424C;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Problem {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>
+<p>Through this blogpost we are going to gain in-depth understanding of Generative Models, why we need them, along with current taxanomy. But before diving into the <em>Why?</em>, <em>What?</em> of Generative Models, let us consider a simple example of trained Deep Neural Network(DNN) that classifies images of animals. Although the network is trained so well but adding noise to image could output false classification, even though noise added to image doesn&rsquo;t change the semantics under human perception. This example indicates that neural networks that are used to parameterize the conditional distribution \(p(y|\textbf{x})\) seem to lack <em>semantic</em> understanding of images. A useful model in real world will not only output probability of correctness of classification for example but will be able to tell its level of uncertainity for the answer.</p>
+<h2 id="why-generative-modelling">Why Generative Modelling?</h2>
+<p>Deep Learning models cannot go on making decision about the problems without understanding the reality, and express uncertainity about surrounding world. Assume we have some two-dimensional data and new data-point to be classified. Now, there are two approaches we can use to solve this problem. First, classifier could estimate the result by modelling conditional distribution \(p(y|\textbf{x})\). Second, we can consider joint distribution \(p(\textbf{x}, y)\) that could be further decomposed as \(p(\textbf{x}, y)=p(y|\textbf{x})p(\textbf{x})\).</p>
+<figure>
+    <img loading="lazy" src="/GenerativeModelling/Discriminative_Generative.png"
+         alt="And example of data (left) and two approaches to decision making: (middle) a discriminative approach and (right) a generative approach"/> <figcaption>
+            <p>And example of data (left) and two approaches to decision making: (middle) a discriminative approach and (right) a generative approach</p>
+        </figcaption>
+</figure>
+
+<p>In the above figure, both the approaches i.e. discriminative and generative have made a decision boundary. On one hand former is quite certain of &ldquo;X&rdquo; being a part of blue region whereas latter uses \(p(\textbf{x})\) to account for additional understanding. Now, &ldquo;X&rdquo; lies far from orange zone, but also does not lie in the region of high probability mass in blue zone due to which generative approach said \(p(\textbf{x})\) as low. And, if we want these models to be communicative enough such that as humans we can understand why thy are making decisions that they are making, that would be a <strong>crucial</strong> skill to exploit.</p>
+<h3 id="significance-of-span-classmath-inlineempememxemspan">Significance of <span class="math inline"><em>p</em>(<em>x</em>)</span></h3>
+<p>From the <em>generative</em> perspective, knowing the distribution \(p(\textbf{x})\) is essential because:</p>
+<ul>
+<li>It could be used to assess whether a given object has been observed in past or not.</li>
+<li>It could help to properly weight the decision.</li>
+<li>It could be used to assess uncertainity about the environment.</li>
+<li>It could be used to actively learn by interacting with environment( e.g. by asking for labeling objects with low \(p(\textbf{x})\))</li>
+<li>It could be used to generate (syntheize) new objects.</li>
+</ul>
+<p>Though, some if not most of the readers might be ignorant to the use of \(p(\textbf{x})\) only as generator of new data, but above points bring into varied perspectives of it. And at this point, the sail that once started from island of discriminative modelling brought us to the vast land of generative modelling.</p>
+<h2 id="where-can-we-use-deep-generative-modelling">Where Can we use (Deep) Generative Modelling?</h2>
+<p>Deep Generative Modelling need high computational power for training and with the advent of GPU and Deep Learning Frameworks like PyTorch, TensorFlow etc we have seen vast applications thereof.</p>
+<p>Some applications vary from typical modalities considered in machine learning:-</p>
+<ol>
+<li><strong>Text Analysis:</strong> Question-Answering, Machine Translation, Text-to-Image Generation</li>
+<li><strong>Image-Analysis:</strong> Data Augmentation, Super Resolution, Image Inpainting, Image Denoising, Object Transfiguration, Image Colorization, Image Captioning, Video Prediction etc.</li>
+<li><strong>Audio Analysis:</strong> WaveNet</li>
+<li><strong>Active Learning:</strong> Generate synthetic medical images, generate synthetic text data etc.</li>
+<li><strong>Reinforcement Learning:</strong> World Models</li>
+<li><strong>Graph Analysis:</strong> Understanding Interaction Dynamics in Social Networks, Anomaly Detection, Protein Structure Modelling, Source Code Generation, Semantic Parsing.</li>
+</ol>
+<h2 id="how-to-formulate-deep-generative-modelling">How to Formulate (Deep) Generative Modelling?</h2>
+<p>After asking some important questions of <em>What</em> and <em>where</em>, its&rsquo; time to ask <em>how</em>. In other words we can understand the section heading as how to express \(p(\textbf{x})\). We can divide (Deep) Generative modelling into four categories:- \((1)\) Autoregressive Generative Models(ARM) \((2)\) Flow-based Models \((3)\) Latent variable models \((4)\) Energy-based models</p>
+<figure>
+    <img loading="lazy" src="/GenerativeModelling/taxonomy.png"
+         alt="A taxonomy of deep generative models" width="700px" height="550px"/> <figcaption>
+            <p>A taxonomy of deep generative models</p>
+        </figcaption>
+</figure>
+
+<p>Deep Generative models can be divided into two types of density estimation methods, namely \((1)\) Explicit Density Models \((2)\) Implicit Density Models. Say you have data distribution \(p_{data}\), \(p_{model}(\textbf{x};\theta)\) likelihood function which learns that data distribution and \(\textbf{x}=[x_{1}, x_{2}, &hellip;, x_{n}]^{T}\) are data-points of dataset. Now in explicit density models we compute \(p_{model}(\textbf{x};\theta)\) in short \(p(\textbf{x})\), but in implicit models we dont&rsquo; need to compute this likelihood function but directly sample from the distribution e.g. sampling values from noise, and generate for instance image samples using some transformation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Explicit Generative Methods</th>
+<th style="text-align:center">Impliit Generative Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">define an explicit density form(\(p_{model}(\textbf{x};\theta)\)) that allows likelihood inference</td>
+<td style="text-align:center">target a flexible transformation(Generator) from random noise to generated samples</td>
+</tr>
+<tr>
+<td style="text-align:center">used to estimate the probability density function of the data</td>
+<td style="text-align:center">can generate new samples from the learned distribution</td>
+</tr>
+<tr>
+<td style="text-align:center">require computing the likelihood of the data, which can be computationally expensive</td>
+<td style="text-align:center">do not require computing the likelihood</td>
+</tr>
+<tr>
+<td style="text-align:center">typically easier to interpret and analyze</td>
+<td style="text-align:center">more flexible and can capture complex distributions</td>
+</tr>
+<tr>
+<td style="text-align:center">can suffer from overfitting</td>
+<td style="text-align:center">can suffer from mode collapse</td>
+</tr>
+<tr>
+<td style="text-align:center">trained using maximum likelihood estimation</td>
+<td style="text-align:center">typically trained using adversarial training or variational inference</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explicit-generative-methods">Explicit Generative Methods</h3>
+<p>Explicit density methods need to estimate the density of underlying data distribution and marginal likelihood in denominator of bayes rule \(p(z|x)=\frac{p(x,z)}{\int p(x|z)p(z)}\) creates problem since it involves integral. Now if this likelihood can be solved in closed-form expression then those problems lie under <em>tractable density</em> otherwise we need to find approximations to it and so those problems lie under <em>approximate density</em> class. Also, tractable density can be computed in polynomial time but intractable(not approximate) takes more than exponential time to solve. In the given link of <a href="https://en.wikipedia.org/wiki/Closed-form_expression">Closed Form Expressions</a> a table is given where you can check that we do not have any closed form solution under integral.</p>
+<h4 id="tractable-generative-models">Tractable Generative Models</h4>
+<p>In tractable density models we have two type of techniques namely \((1)\) Autoregressive Models \((2)\) Flow-based Models.</p>
+<h5 id="autoregressive-models">Autoregressive Models</h5>
+<p>Here, distribution over \(\textbf{x}\) is represented in an autoregressive manner:</p>
+<p>$$p(\textbf{x})=p(x_{0})\prod_{i=1}^{D}p(x_{i}\vert\textbf{x}_{&lt;i})$$</p>
+<p>where, \(\textbf{x}_{&lt;i}\) denotes all \(\textbf{x}\)&rsquo;s upto index \(i\).</p>
+<p>Modelling all conditional distributions \(p(x_{i}\vert\textbf{x}_{&lt;i})\) would be computationally inefficient. But there are many ways we solve this, although we will not talk about autoregessive models here.</p>
+<h5 id="flow-based-models">Flow-based Models</h5>
+<p>The change of variable formula provides a principled manner of expressing a density of a random variable by transforming it with an invertible transformation \(f\).</p>
+<p>$$p(\textbf{x})=p(z=f(x))\vert\text{J}_{f(\textbf{x})}\vert$$</p>
+<p>where \(\text{J}_{f(\textbf{x})}\) denotes the Jacobian Matrix.</p>
+<p>We can parameterize \(f\) using deep neural networks; however, it cannot be any arbitrary neural networks, because we must be able to calculate the Jacobian matrix. All generative models that take advantage of change of variables formula are referred as <strong>flow-based models</strong> or <em>flows</em> for short.</p>
+<h4 id="approximate-generative-models">Approximate Generative Models</h4>
+<p>In approximate density models we have two type of techniques namely \((1)\) Prescribed Models \((2)\) Energy-based Models.</p>
+<h5 id="prescribed-models">Prescribed Models</h5>
+<p>The idea behind <strong>latent variable models</strong> is to assume a lower-dimensional latent space and the following generative process:
+$$\textbf{z} \sim p(\textbf{z})$$
+$$\textbf{x} \sim p(\textbf{x}\vert\textbf{z})$$
+Latent variables corresponds to hidden factor in data, and the conditional distribution \(p(\textbf{x}\vert\textbf{z})\) could be treated as a <em>generator</em>.</p>
+<p>The most widely known known latent variable model is <strong>probabilisitc Principal Component Analysis</strong> (pPCA) where \(p(\textbf{z})\) and \(p(\textbf{x}\vert\textbf{z})\) are Gaussian distibutions, and dependency between \(\textbf{z}\) and \(\textbf{x}\) is linear.</p>
+<p>A non-linear extension of pPCA with arbitratry distributions is the <strong>Variational Auto-Encoder</strong> (VAE) framework. In VAEs and the pPCA all distributions must be defined upfront and, therefore, they are called <em>prescribed models</em>.</p>
+<h5 id="energy-based-models">Energy Based Models</h5>
+<p>Physics provide an interesting perspective on defining a group of generative models through defining an <em>energy function</em>, \(E(\textbf{x})\), and, eventually the Boltzmann distribution:
+$$p(\textbf{x}) = \frac{e^{-E(\textbf{x})}}{Z}$$
+where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\) normalizes the values of function.</p>
+<p>The main idea behind EBMs is to formulate the energy function and calculate(or rather approximate) the partition function.</p>
+<h3 id="implicit-generative-methods">Implicit Generative Methods</h3>
+<h4 id="gans">GANs</h4>
+<p>Above all described methods except EBMs used <em>log-likelihood</em> function for density estimation, but another approach uses <em>adversarial loss</em> where discriminator \(D(\cdot)\) determines a difference between real data and synthetic data provided by the generator in the implicit form, these are <strong>Generative Adversaial Networks</strong>(GANs) under <em>implicit models</em>.</p>
+<div class="Important">
+❗<strong>Important</strong></br>
+      It is to be noted that these groups dont' create hard demarcations and there are methods that use concepts from more than one groups for e.g. flow-based GAN model
+</div>
+<h2 id="overview">Overview</h2>
+<p>Below is provided a table that shows comparision of all the four groups of methods on some arbitrary criteria like:-</p>
+<ul>
+<li>Whether training is typically <strong>stable</strong>?</li>
+<li>Whether it is possible to calculate <strong>likelihood function</strong>?</li>
+<li>Whether one can use a model for <strong>lossy</strong> or <strong>lossless</strong> compression?</li>
+<li>Whether a model can be used for <strong>Representation Learning</strong>?</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Generative Models</th>
+<th style="text-align:center">Training</th>
+<th style="text-align:center">Likelihood</th>
+<th style="text-align:center">Sampling</th>
+<th style="text-align:center">Compression</th>
+<th style="text-align:center">Representation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Autoregressive</td>
+<td style="text-align:center"><span style="color:#03AC13">Stable</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Exact</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">Slow</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Lossless</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">No</span></td>
+</tr>
+<tr>
+<td style="text-align:left">Flow-based</td>
+<td style="text-align:center"><span style="color:#03AC13">Stable</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Exact</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Fast</span>/<span style="color:#B90E0A">Slow</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Lossless</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Yes</span></td>
+</tr>
+<tr>
+<td style="text-align:left">Implicit</td>
+<td style="text-align:center"><span style="color:#B90E0A">Unstable</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">No</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Fast</span></td>
+<td style="text-align:center">No</td>
+<td style="text-align:center"><span style="color:#B90E0A">No</span></td>
+</tr>
+<tr>
+<td style="text-align:left">Prescribed</td>
+<td style="text-align:center"><span style="color:#03AC13">Stable</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Approximate</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Fast</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">Lossy</span></td>
+<td style="text-align:center"><span style="color:#03AC13">Yes</span></td>
+</tr>
+<tr>
+<td style="text-align:left">Energy-based</td>
+<td style="text-align:center"><span style="color:#03AC13">Stable</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">Unnormalized</span></td>
+<td style="text-align:center"><span style="color:#B90E0A">Slow</span></td>
+<td style="text-align:center">Rather not</td>
+<td style="text-align:center"><span style="color:#03AC13">Yes</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>[1] Tomczak, J. M. (2022). Deep Generative Modeling. Springer Nature</p>
+<p>[2] Wu, Q., Gao, R., &amp; Zha, H. (2021). Bridging Explicit and Implicit Deep Generative Models via Neural Stein Estimators. In Neural Information Processing Systems (Vol. 34). <a href="https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html">https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html</a></p>
+<p>[3] Bond-Taylor, S., Leach, A., Long, Y., &amp; Willcocks, C. G. (2021). Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11), 7327–7347. <a href="https://doi.org/10.1109/tpami.2021.3116668">https://doi.org/10.1109/tpami.2021.3116668</a></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

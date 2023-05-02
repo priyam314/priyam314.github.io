@@ -19,37 +19,41 @@ div {
   margin-bottom: 15px;
   padding: 4px 12px;
 }
-
-.definition {
-	background-color: #e1f1fd;
-	border-left: 6px solid #72A0C1;
-	color: #41424C;
+.Example {
+    background-color: #DCDCDC;
+    border-left: 6px solid #696969;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.important{
-	background-color: #FFFFE0;
-	border-left:6px solid #FFDF00;
-	color: #41424C;
+.Theoram {
+        background-color: #E9FFDB;
+        border-left: 6px solid #4C9A2A;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.danger {
-  background-color: #ffdddd;
-  border-left: 6px solid #f44336;
-  color: #666666;
+.Definition {
+        background-color: #e1f1fd;
+        border-left: 6px solid #72A0C1;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-.success {
-  background-color: #ddffdd;
-  border-left: 6px solid #04AA6D;
+.Important{
+        background-color: #FFFFE0;
+        border-left:6px solid #FFDF00;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-.info {
-  background-color: #e7f3fe;
-  border-left: 6px solid #2196F3;
+.Problem {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-
-.warning {
-  background-color: #ffffcc;
-  border-left: 6px solid #ffeb3b;
+.Info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 </style>
 <blockquote>
@@ -199,8 +203,8 @@ div {
 </blockquote>
 <p>The following quote also applies to Deep Neural Networks except they consume data and then base their prediction. Every preceding datapoint affect the prediction of sucessive sample in dataset. Instance Attribution methods are useful in predicting the data samples that contributed more to the models&rsquo; prediction performance for particular instance/datapoint. Empirical analysis indicates that the most influential training data share similar artifacts e.g. high overlapping bias between <em>premise</em> and <em>hypothesis</em> for NLI task.</p>
 <h3 id="morgans-canon-for-machine-learning">Morgans&rsquo; Canon for Machine Learning</h3>
-<div class="definition">
-    <strong>Anthromorphism</strong> </br>
+<div class="Definition">
+    <strong>📖 Anthromorphism</strong> </br>
     <em>The tendency of humans to attribute human-like psychological characterstics to non-humans on the basis of insufficient empirical evidence</em>
 </div>
 <p>Psychologist Lloyd Morgon developed a guideline for interpreting non-human behaviour in response to the fallacy of Anthromorphism.</p>
@@ -247,8 +251,8 @@ we are only concerned with easy features (\(I\)) rather than hard features, sinc
 <p>then, \(p_{1} \land p_{2} \land p_{3} = S \land I \land E\)<br/>
 This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learned by initial layers early during training</em>&rdquo;</p>
 <p>Now we need to define the notion of task difficulty(\(\Psi\)) which actually depends on model and data distribution (\(X, y\)) where \(X\) is input and \(y\) is label. Then \(\Psi_{M}^{P}(X \rightarrow y)\) indicates difficulty of predicting label \(y\) given input \(X\) for model \(M\) and some distribution \(P\), where \(X, y \sim P\). Spurious feature \(s\) is potential shortcut for model \(M\) iff \(\Psi_{M}^{P_{tr}}(X \rightarrow y) &gt; \Psi_{M}^{P_{tr}}(X \rightarrow s)\). Which means, difficulty of predicting spurious feature \(s\) is easier than predicting label \(y\) for model \(M\) for a training distribution \(P_{tr}\).</p>
-<div class="important">
-	<strong>What does it mean to predict spurious features?</strong> </br>
+<div class="Important">
+	<strong>❗What does it mean to predict spurious features?</strong> </br>
 	Labels are the true predictions for an input, and model can learn to output these labels either by learning intended features or spurious features. So predicting spurious features means correctly predicting the input using spurious features.
 </div>
 <p>But how would we measure the task difficulty? using two metrics <cite>Prediction Depth</cite> and \(\nu\)-<cite>Usable Information</cite>. <b>Prediction Depth</b> of an input is <em>defined as minimum number of layers required by the model to classify the input</em>. \(\mathit{\boldsymbol{\nu}}\)<b>-Usable Information</b> is defined as <em>amount of usable information in some input </em> \(X\)<em> that can be used by model to predict</em> \(y\), higher the usable information easier the dataset or datapoint/sample is.</p>

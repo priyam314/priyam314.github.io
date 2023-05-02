@@ -14,7 +14,49 @@
       
       <guid>https://www.eulogs.com/posts/conscious-ai/</guid>
       <description>Summarized explanation of Conscious-AI Research Paper</description>
-      <content:encoded><![CDATA[<p>DOI: <a href="https://arxiv.org/abs/2105.07879">Paper Link</a></p>
+      <content:encoded><![CDATA[<style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+.Example {
+    background-color: #DCDCDC;
+    border-left: 6px solid #696969;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Theoram {
+        background-color: #E9FFDB;
+        border-left: 6px solid #4C9A2A;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Definition {
+        background-color: #e1f1fd;
+        border-left: 6px solid #72A0C1;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Important{
+        background-color: #FFFFE0;
+        border-left:6px solid #FFDF00;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Problem {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>
+<p>DOI: <a href="https://arxiv.org/abs/2105.07879">Paper Link</a></p>
 <h1 id="introduction">Introduction</h1>
  <p style="text-align:center;"><b>Three levels of Intelligence</b></p>
 <ul>

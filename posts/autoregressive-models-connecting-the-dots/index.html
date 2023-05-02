@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Autoregressive Models: Connecting the Dots | Eulogs</title>
+<meta name="keywords" content="Autoregressive Models">
+<meta name="description" content="Desc Text.">
+<meta name="author" content="Priyam Garg">
+<link rel="canonical" href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.3f3b46c12dd1b69ef8457c722cf0f7c0ea62b0d66ef4452de930530dee4f69ac.css" integrity="sha256-PztGwS3Rtp74RXxyLPD3wOpisNZu9EUt6TBTDe5Paaw=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.eulogs.com/favicon.ico">
+<link rel="apple-touch-icon" href="https://www.eulogs.com/apple-touch-icon.png">
+
+<meta name="twitter:title" content="Autoregressive Models: Connecting the Dots | Eulogs" />
+<meta name="twitter:description" content="Desc Text." />
+<meta property="og:title" content="Autoregressive Models: Connecting the Dots | Eulogs" />
+<meta property="og:description" content="Desc Text." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/" />
+<meta property="article:section" content="posts" />
+  <meta property="article:published_time" content="2023-04-30T20:26:02&#43;05:30" />
+  <meta property="article:modified_time" content="2023-04-30T20:26:02&#43;05:30" /><meta property="og:site_name" content="Eulogs" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.eulogs.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Autoregressive Models: Connecting the Dots",
+      "item": "https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Autoregressive Models: Connecting the Dots | Eulogs",
+  "name": "Autoregressive Models: Connecting the Dots",
+  "description": "Desc Text.",
+  "keywords": [
+    "Autoregressive Models"
+  ],
+  "wordCount" : "1105",
+  "inLanguage": "en",
+  "datePublished": "2023-04-30T20:26:02+05:30",
+  "dateModified": "2023-04-30T20:26:02+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Priyam Garg"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Eulogs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.eulogs.com/favicon.ico"
+    }
+  }
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-posts kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'light';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.eulogs.com/" accesskey="h" title="Eulogs (Alt + H)">Eulogs</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.eulogs.com/posts/" title="Posts" class="active"
+                >Posts
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eulogs.com/archives/" title="Archive"
+                >Archive
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eulogs.com/search/" title="Search (Alt &#43; /)"data-no-instant accesskey=/
+                >Search
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eulogs.com/categories/" title="Categories"
+                >Categories
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eulogs.com/tags/" title="Tags"
+                >Tags
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://www.eulogs.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.eulogs.com/posts/">Posts</a></div><h1 class="post-title">Autoregressive Models: Connecting the Dots</h1>
+    <div class="post-description">Desc Text.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>April 30, 2023</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="https://www.eulogs.com/tags/autoregressive-models/">Autoregressive Models</a></span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select: text;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" style="user-select: text;"></path><polyline points="14 2 14 8 20 8" style="user-select: text;"></polyline><line x1="16" y1="13" x2="8" y2="13" style="user-select: text;"></line><line x1="16" y1="17" x2="8" y2="17" style="user-select: text;"></line><polyline points="10 9 9 9 8 9" style="user-select: text;"></polyline></svg>
+  <span>1105 words</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>6 min</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg"width="24" height="24" viewBox="0 0 24 24" stroke="black" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg>Priyam Garg</span>
+
+      
+      
+    </div>
+  </header> <div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#motivation" aria-label="Motivation">Motivation</a><ul>
+                        
+                <li>
+                    <a href="#problems-we-would-like-to-solve" aria-label="Problems we would like to solve">Problems we would like to solve</a></li>
+                <li>
+                    <a href="#desiderata" aria-label="Desiderata">Desiderata</a></li></ul>
+                </li>
+                <li>
+                    <a href="#function-approximation" aria-label="Function Approximation">Function Approximation</a></li>
+                <li>
+                    <a href="#setting-bayes-as-base" aria-label="Setting Bayes as base">Setting Bayes as base</a></li>
+                <li>
+                    <a href="#deep-autoregressive-models-architectures" aria-label="Deep Autoregressive Models Architectures">Deep Autoregressive Models Architectures</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+  <div class="post-content"><style>
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+.Example {
+    background-color: #DCDCDC;
+    border-left: 6px solid #696969;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Theoram {
+        background-color: #E9FFDB;
+        border-left: 6px solid #4C9A2A;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Definition {
+        background-color: #e1f1fd;
+        border-left: 6px solid #72A0C1;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Important{
+        background-color: #FFFFE0;
+        border-left:6px solid #FFDF00;
+        color: #41424C;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Problem {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 6px solid #DEB887;
+    color: #41424C;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>
+<blockquote>
+<p>The future will soon be a thing of past</p>
+<p><cite>&ndash;George Carlin</cite></p>
+</blockquote>
+<p>Blogpost will talk about <em>need</em> and <em>what</em> of Autoregressive models, but before going towards the <em>what</em>, its&rsquo; better to first understand why we felt the need to have another type of models in machine learning community. We will look at the Motivation behind the creation and what problems we want to solve using them.</p>
+<h2 id="motivation">Motivation<a hidden class="anchor" aria-hidden="true" href="#motivation">¶</a></h2>
+<h3 id="problems-we-would-like-to-solve">Problems we would like to solve<a hidden class="anchor" aria-hidden="true" href="#problems-we-would-like-to-solve">¶</a></h3>
+<ol>
+<li><strong>Generating Data:</strong> syntheizing images, text, videos, speech</li>
+<li><strong>Compressing data:</strong> constructing efficient codes.</li>
+<li><strong>Anomaly Detection:</strong> e.g. supervised estimator is forced to make a decision even over the datapoint it is uncertain about</li>
+</ol>
+<p>Suppose there exist true data distribution \(p_{data}(\textbf{x})\), now you most probably will not be able to know this distribution but what you can do is sample some data points from it \(\textbf{x}^{(1)}, \textbf{x}^{(2)} &hellip; \textbf{x}^{(n)} \sim p_{data}(\textbf{x})\). Now likelihood based models try to estimate this \(p_{data}\) by finding a distribution that closely fits to the datapoints sampled. But likelihood function we try to find should basically find probability \(p(\textbf{x})\) for any arbitrary \(\textbf{x}\) such that it will actually closely fits to true distribution and not just sampled distribution, and also be able to sample \(\textbf{x} \sim p(\textbf{x})\)</p>
+<p>Its&rsquo; important to note that just because we can sample from distribution so we can compute it too or just because we can compute the distribution then we can sample from it too. But using Autoregressive models we will be able to do both, and actually computing probability will be lot easier than generating samples.</p>
+<h3 id="desiderata">Desiderata<a hidden class="anchor" aria-hidden="true" href="#desiderata">¶</a></h3>
+<ol>
+<li>
+<p>We want to estimate distribution of complex high dimenional data, lets&rsquo; say you have an image of \(128\times 128\times 3\) which will correspond to \(\sim \textbf{50,000}\) pixels(or dimensions). And its&rsquo; just not for one image datapoint but whole lot of dataset.</p>
+</li>
+<li>
+<p>To learn such high dimensional data we need computationl and statistical efficiency. Think of <em>computational efficiency</em> as operation should not take much time and <em>statistical efficiency</em> as it should not take whole lot of datapoints to start understanding the patterns in the datapoints with whatever model we use.</p>
+<ul>
+<li>Efficient training(computationally and statistically) and model representation</li>
+<li>Expressiveness and Generalization</li>
+<li>Sampling quality and speed</li>
+<li>Compression rate and speed</li>
+</ul>
+</li>
+</ol>
+<h2 id="function-approximation">Function Approximation<a hidden class="anchor" aria-hidden="true" href="#function-approximation">¶</a></h2>
+<p>Our goal is to estimate true distribution \(p_{data}\) using sampled datapoints \(\textbf{x}^{(1)}, \textbf{x}^{(2)} &hellip; \textbf{x}^{(n)} \sim p_{data}(\textbf{x})\). So we introduce <strong>function approximation</strong> which will learn the weights/parameters \(\theta\) of the likelihood function(here, Neural Network) such that \(p_{\theta}(\textbf{x}) \approx p_{data}(\textbf{x})\).</p>
+<div class="Question">
+   <strong>❓Question</strong></br>
+      <ol>
+      	<li>
+	   How do we design such function approximators to effectively represent complex <b>joint distributions</b> over <b>x</b>, yet remain easy to train?
+	</li>
+      </ol>
+</div>
+<p>Now, when we train neural nets what we are actually doing is finding the best weights for the model in order to find best likelihood function. So, designing the model and training procedure go hand in hand. And thi pose a search problem over the parameters.
+$$\arg \min_{\theta} \textbf{loss}(\theta, \textbf{x}^{(1)}, &hellip; ,\textbf{x}^{(n)})$$
+For intutive understanding, think of likelihood function to be <em>Gaussian Distribution</em> and \(\theta\) be its mean and variance. So, while training \(\theta\) will keep updating in order to fit some distribution.</p>
+<p>Most likely objective we use is <em>Maximum Likelihood</em>
+$$\arg \min_{\theta} loss(\theta, \textbf{x}^{(1)}, &hellip;, \textbf{x}^{(n)}) = \frac{1}{n} \sum_{i=1}^{n}-\log p_{\theta}(\textbf{x}^{(i)})$$
+It is interesting to note that minimizing KL Divergence is asymptotically equivalent to maximizing the likelihood.</p>
+<div class="Question">
+   <strong>❓How minimizing KL Divergence asymptotically equivalent to maximizing the likelihood?</strong></br>
+   <p>Let there exist likelihood function for true distribution <span
+class="math inline">\(P(x\vert\theta^{*})\)</span> and approximate
+function <span class="math inline">\(P(x\vert\theta)\)</span> <span
+class="math display">\[\begin{aligned}
+\theta_{\min KL} &amp;= \arg
+\min_{\theta}D_{KL}\left[P(x\vert\theta^{*})\Vert P(x\vert\theta)\right]
+\\
+                  &amp;= \arg \min_{\theta} \mathbb{E}_{x \sim P(x \vert
+\theta^{*})}\left[\log
+\frac{P(x\vert\theta^{*})}{P(x\vert\theta)}\right]
+\end{aligned}\]</span>  <span
+class="math inline">\(P(x\vert\theta^{*})\)</span> is not going to
+contribute to the optimization and can be popped out of equation  <span
+class="math display">\[\begin{aligned}
+\theta_{\min KL} &amp;= \arg \min_{\theta} \mathbb{E}_{x \sim P(x \vert
+\theta^{*})}\left[-\log P(x\vert\theta)\right] \\
+                  &amp;= \arg \max_{\theta} \mathbb{E}_{x \sim P(x \vert
+\theta^{*})}\left[\log P(x\vert\theta)\right]
+\end{aligned}\]</span>  Applying the law of large numbers, <span
+class="math display">\[\begin{aligned}
+\theta_{\min KL} &amp;= \arg \max_{\theta} \lim_{n \rightarrow \infty}
+\frac{1}{n}\sum_{i=1}^{n} \log P(x_{i}\vert \theta) \\
+                  &amp;= \arg \max_{\theta} \log P(x \vert \theta) \\
+                  &amp;= \arg \max_{\theta} P(x \vert \theta) \\
+                  &amp;= \theta_{max MLE}
+\end{aligned}\]</span></p>
+</div>
+<p>Okay, back to our search problem over parameters we found loss function as maximum likelihood but what procedure to follow for optimization? <strong>Stochastic Gradient Descent</strong> (SGD) seems to work just fine!</p>
+<h2 id="setting-bayes-as-base">Setting Bayes as base<a hidden class="anchor" aria-hidden="true" href="#setting-bayes-as-base">¶</a></h2>
+<p>Let us a consider a high-dimensional random variable \(\textbf{x} \in \mathcal{X}^{D}\) where \(\mathcal{X} = {0, 1, &hellip;, 255}\) (e.g. pixel values) or \(\mathcal{X}=\mathbb{R}\). Our goal is to model \(p(\textbf{x})\). For intutive undertanding, say you have an image whose height and width are same as \(\sqrt{D}\) which implies there would be \(D\) pixels or dimensions, each dimension can vary over \(\mathbb{R}\). So to model image \(\textbf{x}\) would be equivalent to model the joint distribution of all the pixels or dimensions of the image.</p>
+<p>$$
+\begin{aligned}
+p(x) &amp;= p(x_{1}, x_{2},&hellip;, x_{d}) \cr
+&amp;= p(x_{1})p(x_{2}\vert x_{1})&hellip;p(x_{D}\vert x_{1},&hellip;, x_{D-1}) \cr
+&amp;= p(x_{1})\prod_{d=2}^{D}p(x_{d}\vert x_{&lt;d}) \cr
+\log p(x) &amp;= \boxed{p(x_{1})\sum_{d=2}^{D}\log p(x_{d}\vert x_{&lt;d})}
+\end{aligned}
+$$</p>
+<p>This is <strong>Autoregressive Model</strong>.</p>
+<p>Modelling all conditional distribution separately is simplt infeasible! If we did that we would obtain \(D\) different models, and complexity of each model will grow to varying conditioning. Can we solve this issue? <strong>Yes</strong>, by using single, shared model for the all the conditional distributions and that can be done using neural network as that model.</p>
+<h2 id="deep-autoregressive-models-architectures">Deep Autoregressive Models Architectures<a hidden class="anchor" aria-hidden="true" href="#deep-autoregressive-models-architectures">¶</a></h2>
+<p>Reearch community has mostly focused on improving the network architectures of deep autoregressive models [4], some areas they focused on are as follows:-</p>
+<ul>
+<li><strong>Increasing receptive field and memory</strong>: This ensured the network has access to all parts of the input to encourage consistency</li>
+<li><strong>Increasing network capacity</strong>: Which allowed more complex distributions to be modelled.</li>
+</ul>
+<figure>
+    <img loading="lazy" src="/AutoregressiveModelling/taxonomy.png"
+         alt="Taxonomy of Autoregressive Models" width="800px" height="450px"/> <figcaption>
+            <p>Taxonomy of Autoregressive Models</p>
+        </figcaption>
+</figure>
+
+<p>In the above figure we have tried to do as many plausible classifications of Autoregressive models, there can be more but in the community these are the important ones.</p>
+<p>We are no going to learn any of those methods in this blogpost. In future, links to published blogs corresponding to those methods will be added here as list and you can access them directly. This will ease up the navigation process then may it be you want to access root(like in trees) blog post of Generative Modelling series or any leaf blog post like LSTM.</p>
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">¶</a></h2>
+<p>[1] Pieter Abbeel. (2020, February 5). L2 Autoregressive Models &ndash; CS294-158-SP20 Deep Unsupervised Learning &ndash; UC Berkeley, Spring 2020 [Video]. YouTube. <a href="https://www.youtube.com/watch?v=iyEOk8KCRUw">https://www.youtube.com/watch?v=iyEOk8KCRUw</a></p>
+<p>[2] Tae, J. (2020a, March 9). Jake Tae. MLE and KL Divergence. <a href="https://jaketae.github.io/study/kl-mle/">https://jaketae.github.io/study/kl-mle/</a></p>
+<p>[3] Tomczak, J. M. (2022). Deep Generative Modeling. Springer Nature</p>
+<p>[4] Bond-Taylor, S., Leach, A., Long, Y., &amp; Willcocks, C. G. (2021). Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11), 7327–7347. <a href="https://doi.org/10.1109/tpami.2021.3116668">https://doi.org/10.1109/tpami.2021.3116668</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="next" href="https://www.eulogs.com/posts/generative-modelling/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>Generative Modelling: Stormbreaker 🪓 in AI world</span>
+  </a>
+</nav>
+
+  </footer>
+    <div class="comments-separator"></div>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2023 <a href="https://www.eulogs.com/">Eulogs</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '1' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+<script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.post-content img:not([no-zoom])');
+</script>
+
+<script src="/js/instantclick.min.js" data-no-instant
+></script>
+<script data-no-instant>
+  
+  
+  
+  
+  
+  
+  InstantClick.init();
+</script>
+</body>
+
+</html>

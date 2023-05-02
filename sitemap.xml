@@ -2,8 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.eulogs.com/tags/autoregressive-models/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
     <loc>https://www.eulogs.com/categories/</loc>
-    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/generative-modelling/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/</loc>
+    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/energy-based-models/</loc>
+    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/flow-based-models/</loc>
+    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/generative-modelling/</loc>
+    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/latent-variable-models/</loc>
+    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/taxonomy/</loc>
+    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/posts/condition_number/</loc>
     <lastmod>2023-04-15T13:59:40+05:30</lastmod>
@@ -11,16 +44,7 @@
     <loc>https://www.eulogs.com/tags/condition-number/</loc>
     <lastmod>2023-04-15T13:59:40+05:30</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/</loc>
-    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/categories/numerical-analysis/</loc>
-    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/posts/</loc>
-    <lastmod>2023-04-15T13:59:40+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/tags/</loc>
     <lastmod>2023-04-15T13:59:40+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/tags/adversarial-learning/</loc>

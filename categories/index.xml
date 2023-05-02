@@ -6,7 +6,27 @@
     <description>Recent content in Categories on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 13:59:40 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative Modelling</title>
+      <link>https://www.eulogs.com/categories/generative-modelling/</link>
+      <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/categories/generative-modelling/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Taxonomy</title>
+      <link>https://www.eulogs.com/categories/taxonomy/</link>
+      <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/categories/taxonomy/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Numerical-Analysis</title>
       <link>https://www.eulogs.com/categories/numerical-analysis/</link>
