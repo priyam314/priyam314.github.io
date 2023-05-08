@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Eulogs</title>
-    <link>uildDrafts/index.xml</link>
+    <link>https://www.eulogs.com/index.xml</link>
     <description>Recent content on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="uildDrafts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Autoregressive Models: Connecting the Dots</title>
-      <link>uildDrafts/posts/autoregressive-models-connecting-the-dots/</link>
+      <link>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</link>
       <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
       
-      <guid>uildDrafts/posts/autoregressive-models-connecting-the-dots/</guid>
+      <guid>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</guid>
       <description>Desc Text.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -202,10 +202,10 @@ $$</p>
     
     <item>
       <title>Generative Modelling: Stormbreaker 🪓 in AI world</title>
-      <link>uildDrafts/posts/generative-modelling/</link>
+      <link>https://www.eulogs.com/posts/generative-modelling/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>uildDrafts/posts/generative-modelling/</guid>
+      <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
       <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -458,10 +458,10 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
     
     <item>
       <title>Condition Number in Matrix</title>
-      <link>uildDrafts/posts/condition_number/</link>
+      <link>https://www.eulogs.com/posts/condition_number/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>uildDrafts/posts/condition_number/</guid>
+      <guid>https://www.eulogs.com/posts/condition_number/</guid>
       <description>Brief overview of Condition Number and Matrix Norm along with examples</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -642,10 +642,10 @@ This will result in very sensitive computation since
     
     <item>
       <title>Shortcut Learning: Belief trap of Deep Neural Networks</title>
-      <link>uildDrafts/posts/shortcut-learning/</link>
+      <link>https://www.eulogs.com/posts/shortcut-learning/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>uildDrafts/posts/shortcut-learning/</guid>
+      <guid>https://www.eulogs.com/posts/shortcut-learning/</guid>
       <description>Is your neural network really learning what you intend it to learn? Pressing attention of researchers around the world is required to tackle the common enemy of shortcut learning</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -1030,10 +1030,10 @@ This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learne
     
     <item>
       <title>Conscious AI</title>
-      <link>uildDrafts/posts/conscious-ai/</link>
+      <link>https://www.eulogs.com/posts/conscious-ai/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>uildDrafts/posts/conscious-ai/</guid>
+      <guid>https://www.eulogs.com/posts/conscious-ai/</guid>
       <description>Summarized explanation of Conscious-AI Research Paper</description>
       <content:encoded><![CDATA[<style>
 div {

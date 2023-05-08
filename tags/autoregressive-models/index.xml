@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Autoregressive Models on Eulogs</title>
-    <link>uildDrafts/tags/autoregressive-models/</link>
+    <link>https://www.eulogs.com/tags/autoregressive-models/</link>
     <description>Recent content in Autoregressive Models on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="uildDrafts/tags/autoregressive-models/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/autoregressive-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Autoregressive Models: Connecting the Dots</title>
-      <link>uildDrafts/posts/autoregressive-models-connecting-the-dots/</link>
+      <link>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</link>
       <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
       
-      <guid>uildDrafts/posts/autoregressive-models-connecting-the-dots/</guid>
+      <guid>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</guid>
       <description>Desc Text.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -202,10 +202,10 @@ $$</p>
     
     <item>
       <title>Generative Modelling: Stormbreaker 🪓 in AI world</title>
-      <link>uildDrafts/posts/generative-modelling/</link>
+      <link>https://www.eulogs.com/posts/generative-modelling/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>uildDrafts/posts/generative-modelling/</guid>
+      <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
       <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
       <content:encoded><![CDATA[<style>
 div {

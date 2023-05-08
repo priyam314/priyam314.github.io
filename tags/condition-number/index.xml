@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Condition-Number on Eulogs</title>
-    <link>uildDrafts/tags/condition-number/</link>
+    <link>https://www.eulogs.com/tags/condition-number/</link>
     <description>Recent content in Condition-Number on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 13:59:40 +0530</lastBuildDate><atom:link href="uildDrafts/tags/condition-number/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 13:59:40 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/condition-number/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Condition Number in Matrix</title>
-      <link>uildDrafts/posts/condition_number/</link>
+      <link>https://www.eulogs.com/posts/condition_number/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>uildDrafts/posts/condition_number/</guid>
+      <guid>https://www.eulogs.com/posts/condition_number/</guid>
       <description>Brief overview of Condition Number and Matrix Norm along with examples</description>
       <content:encoded><![CDATA[<style>
 div {
