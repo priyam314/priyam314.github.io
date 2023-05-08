@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Research Paper Explanation on Eulogs</title>
-    <link>https://www.eulogs.com/categories/research-paper-explanation/</link>
+    <link>uildDrafts/categories/research-paper-explanation/</link>
     <description>Recent content in Research Paper Explanation on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Mar 2023 21:29:46 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/categories/research-paper-explanation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 21:29:46 +0530</lastBuildDate><atom:link href="uildDrafts/categories/research-paper-explanation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conscious AI</title>
-      <link>https://www.eulogs.com/posts/conscious-ai/</link>
+      <link>uildDrafts/posts/conscious-ai/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/conscious-ai/</guid>
+      <guid>uildDrafts/posts/conscious-ai/</guid>
       <description>Summarized explanation of Conscious-AI Research Paper</description>
       <content:encoded><![CDATA[<style>
 div {

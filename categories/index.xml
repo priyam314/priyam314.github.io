@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Eulogs</title>
-    <link>https://www.eulogs.com/categories/</link>
+    <link>uildDrafts/categories/</link>
     <description>Recent content in Categories on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="uildDrafts/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generative Modelling</title>
-      <link>https://www.eulogs.com/categories/generative-modelling/</link>
+      <link>uildDrafts/categories/generative-modelling/</link>
       <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/generative-modelling/</guid>
+      <guid>uildDrafts/categories/generative-modelling/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Taxonomy</title>
-      <link>https://www.eulogs.com/categories/taxonomy/</link>
+      <link>uildDrafts/categories/taxonomy/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/taxonomy/</guid>
+      <guid>uildDrafts/categories/taxonomy/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Numerical-Analysis</title>
-      <link>https://www.eulogs.com/categories/numerical-analysis/</link>
+      <link>uildDrafts/categories/numerical-analysis/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/numerical-analysis/</guid>
+      <guid>uildDrafts/categories/numerical-analysis/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Shortcut Learning</title>
-      <link>https://www.eulogs.com/categories/shortcut-learning/</link>
+      <link>uildDrafts/categories/shortcut-learning/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/shortcut-learning/</guid>
+      <guid>uildDrafts/categories/shortcut-learning/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Conscious-AI</title>
-      <link>https://www.eulogs.com/categories/conscious-ai/</link>
+      <link>uildDrafts/categories/conscious-ai/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/conscious-ai/</guid>
+      <guid>uildDrafts/categories/conscious-ai/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Research Paper Explanation</title>
-      <link>https://www.eulogs.com/categories/research-paper-explanation/</link>
+      <link>uildDrafts/categories/research-paper-explanation/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/categories/research-paper-explanation/</guid>
+      <guid>uildDrafts/categories/research-paper-explanation/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Condition-Number on Eulogs</title>
-    <link>https://www.eulogs.com/tags/condition-number/</link>
+    <link>uildDrafts/tags/condition-number/</link>
     <description>Recent content in Condition-Number on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 13:59:40 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/condition-number/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 13:59:40 +0530</lastBuildDate><atom:link href="uildDrafts/tags/condition-number/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Condition Number in Matrix</title>
-      <link>https://www.eulogs.com/posts/condition_number/</link>
+      <link>uildDrafts/posts/condition_number/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/condition_number/</guid>
+      <guid>uildDrafts/posts/condition_number/</guid>
       <description>Brief overview of Condition Number and Matrix Norm along with examples</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -92,17 +92,30 @@ div {
 <li>\(\lVert AB \rVert \le \lVert A \rVert \lVert B \rVert\)</li>
 </ol>
 <h2 id="condition-number-1">Condition Number</h2>
-<p>Matrix norm is enough for us to start working on condition number. We will start by accounting in \(Ax=b\) and \(A(x+\Delta{x})=b+\Delta{b}\).
-$$Ax \hspace{1cm} = \hspace{0.7cm} b$$
-$$Ax+A\Delta{x} = b+\Delta{b}$$
-$$\rule{3.5cm}{0.1pt}$$
-$$A\Delta{x} \hspace{1cm}= \hspace{0.7cm}\Delta{b}$$</p>
-<p>applying the \(5^{th}\) property of matrix norms to \(Ax=b\)
-$$\lVert b \rVert = \lVert Ax \rVert \le \lVert A \rVert \lVert x \rVert$$
-$$\frac{1}{\lVert x \rVert} \le \frac{\lVert A \rVert}{\lVert b \rVert}$$
-multiplying \(A\Delta{x} = \Delta{b}\) by \(A^{-1}\) on both sides</p>
-<p>$$A^{-1}A\Delta{x} = A^{-1}\Delta{b}$$
-$$I\Delta{x} = A^{-1}\Delta{b}$$
+<p>Matrix norm is enough for us to start working on condition number. We will start by accounting in \(Ax=b\) and \(A(x+\Delta{x})=b+\Delta{b}\).</p>
+<p>$$
+\begin{aligned}
+\cancel{Ax} &amp;= \cancel{b} \cr
+\cancel{Ax}+A\Delta{x} &amp;= \cancel{b} + \Delta{b} \cr
+\hline \cr
+A\Delta{x} &amp;= \Delta{b} \cr
+\hline
+\end{aligned}
+$$</p>
+<p>applying the \(5^{th}\) property of matrix norms to \(Ax=b\)</p>
+<p>$$
+\begin{aligned}
+\lVert b \rVert = \lVert Ax \rVert &amp;\le \lVert A \rVert \lVert x \rVert \cr
+\frac{1}{\lVert x \rVert} &amp;\le \frac{\lVert A \rVert}{\lVert b \rVert}
+\end{aligned}
+$$</p>
+<p>multiplying \(A\Delta{x} = \Delta{b}\) by \(A^{-1}\) on both sides</p>
+<p>$$
+\begin{aligned}
+A^{-1}A\Delta{x} &amp;= A^{-1}\Delta{b} \cr
+I\Delta{x} &amp;= A^{-1}\Delta{b}
+\end{aligned}
+$$
 taking matrix norm on both sides
 $$\lVert \Delta{x} \rVert = \lVert A^{-1}\Delta{b} \rVert \le \lVert A^{-1} \rVert \lVert \Delta{b} \rVert$$</p>
 <p>we get,

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Eulogs</title>
-    <link>https://www.eulogs.com/index.xml</link>
+    <link>uildDrafts/index.xml</link>
     <description>Recent content on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="uildDrafts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Autoregressive Models: Connecting the Dots</title>
-      <link>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</link>
+      <link>uildDrafts/posts/autoregressive-models-connecting-the-dots/</link>
       <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</guid>
+      <guid>uildDrafts/posts/autoregressive-models-connecting-the-dots/</guid>
       <description>Desc Text.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -163,8 +163,36 @@ $$</p>
 </figure>
 
 <p>In the above figure we have tried to do as many plausible classifications of Autoregressive models, there can be more but in the community these are the important ones.</p>
-<p>We are no going to learn any of those methods in this blogpost. In future, links to published blogs corresponding to those methods will be added here as list and you can access them directly. This will ease up the navigation process then may it be you want to access root(like in trees) blog post of Generative Modelling series or any leaf blog post like LSTM.</p>
-<h2 id="references">References</h2>
+<p>We are no going to learn any of those methods in this blogpost. In future, links to published blogs corresponding to those methods will be added here as list and you can access them directly. This will ease up the navigation process then may it be you want to access root(like in trees) blog post of <a href="https://www.eulogs.com/posts/generative-modelling/#why-generative-modelling">Generative Modelling: Stormbreaker 🪓 in AI world</a> series or any leaf blog post like LSTM.</p>
+<h2 id="citation">Citation</h2>
+<p>Cited as:</p>
+<blockquote>
+<p>Garg, P. (2023, May 2). Autoregressive Models: Connecting the Dots. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</a></p>
+</blockquote>
+<p>or</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@article</span><span class="p">{</span><span class="nl">garg_2023</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">   <span class="na">title</span>   <span class="p">=</span> <span class="s">&#34;Autoregressive Models: Connecting the dots&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">author</span>  <span class="p">=</span> <span class="s">&#34;Garg, Priyam&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">journal</span> <span class="p">=</span> <span class="s">&#34;www.eulogs.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">year</span>    <span class="p">=</span> <span class="s">&#34;2023&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">month</span>   <span class="p">=</span> <span class="s">&#34;May&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">url</span>     <span class="p">=</span> <span class="s">&#34;https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
 <p>[1] Pieter Abbeel. (2020, February 5). L2 Autoregressive Models &ndash; CS294-158-SP20 Deep Unsupervised Learning &ndash; UC Berkeley, Spring 2020 [Video]. YouTube. <a href="https://www.youtube.com/watch?v=iyEOk8KCRUw">https://www.youtube.com/watch?v=iyEOk8KCRUw</a></p>
 <p>[2] Tae, J. (2020a, March 9). Jake Tae. MLE and KL Divergence. <a href="https://jaketae.github.io/study/kl-mle/">https://jaketae.github.io/study/kl-mle/</a></p>
 <p>[3] Tomczak, J. M. (2022). Deep Generative Modeling. Springer Nature</p>
@@ -174,10 +202,10 @@ $$</p>
     
     <item>
       <title>Generative Modelling: Stormbreaker 🪓 in AI world</title>
-      <link>https://www.eulogs.com/posts/generative-modelling/</link>
+      <link>uildDrafts/posts/generative-modelling/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
+      <guid>uildDrafts/posts/generative-modelling/</guid>
       <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -305,7 +333,7 @@ div {
 <p>Here, distribution over \(\textbf{x}\) is represented in an autoregressive manner:</p>
 <p>$$p(\textbf{x})=p(x_{0})\prod_{i=1}^{D}p(x_{i}\vert\textbf{x}_{&lt;i})$$</p>
 <p>where, \(\textbf{x}_{&lt;i}\) denotes all \(\textbf{x}\)&rsquo;s upto index \(i\).</p>
-<p>Modelling all conditional distributions \(p(x_{i}\vert\textbf{x}_{&lt;i})\) would be computationally inefficient. But there are many ways we solve this, although we will not talk about autoregessive models here.</p>
+<p>Modelling all conditional distributions \(p(x_{i}\vert\textbf{x}_{&lt;i})\) would be computationally inefficient. But there are many ways we solve this, although we will not talk about autoregessive models here. Checkout the post <a href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">Autoregressive Models: Connecting the dots</a> that talk about why we needed these type of models anyway along with its taxonomy.</p>
 <h5 id="flow-based-models">Flow-based Models</h5>
 <p>The change of variable formula provides a principled manner of expressing a density of a random variable by transforming it with an invertible transformation \(f\).</p>
 <p>$$p(\textbf{x})=p(z=f(x))\vert\text{J}_{f(\textbf{x})}\vert$$</p>
@@ -394,7 +422,34 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
 </tr>
 </tbody>
 </table>
-<h2 id="references">References</h2>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Garg, P. (2023a, April 30). Generative Modelling: Stormbreaker 🪓 in AI world. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/generative-modelling/">https://www.eulogs.com/posts/generative-modelling/</a></p>
+</blockquote>
+<p>or</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@article</span><span class="p">{</span><span class="nl">garg_2023</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">title</span>   <span class="p">=</span> <span class="s">&#34;Generative Modelling: Stormbreaker 🪓 in AI world&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">author</span>  <span class="p">=</span> <span class="s">&#34;Garg, Priyam&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">journal</span> <span class="p">=</span> <span class="s">&#34;www.eulogs.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">year</span>    <span class="p">=</span> <span class="s">&#34;2023&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">month</span>   <span class="p">=</span> <span class="s">&#34;Apr&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">url</span>     <span class="p">=</span> <span class="s">&#34;https://www.eulogs.com/posts/generative-modelling/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
 <p>[1] Tomczak, J. M. (2022). Deep Generative Modeling. Springer Nature</p>
 <p>[2] Wu, Q., Gao, R., &amp; Zha, H. (2021). Bridging Explicit and Implicit Deep Generative Models via Neural Stein Estimators. In Neural Information Processing Systems (Vol. 34). <a href="https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html">https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html</a></p>
 <p>[3] Bond-Taylor, S., Leach, A., Long, Y., &amp; Willcocks, C. G. (2021). Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11), 7327–7347. <a href="https://doi.org/10.1109/tpami.2021.3116668">https://doi.org/10.1109/tpami.2021.3116668</a></p>
@@ -403,10 +458,10 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
     
     <item>
       <title>Condition Number in Matrix</title>
-      <link>https://www.eulogs.com/posts/condition_number/</link>
+      <link>uildDrafts/posts/condition_number/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/condition_number/</guid>
+      <guid>uildDrafts/posts/condition_number/</guid>
       <description>Brief overview of Condition Number and Matrix Norm along with examples</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -486,17 +541,30 @@ div {
 <li>\(\lVert AB \rVert \le \lVert A \rVert \lVert B \rVert\)</li>
 </ol>
 <h2 id="condition-number-1">Condition Number</h2>
-<p>Matrix norm is enough for us to start working on condition number. We will start by accounting in \(Ax=b\) and \(A(x+\Delta{x})=b+\Delta{b}\).
-$$Ax \hspace{1cm} = \hspace{0.7cm} b$$
-$$Ax+A\Delta{x} = b+\Delta{b}$$
-$$\rule{3.5cm}{0.1pt}$$
-$$A\Delta{x} \hspace{1cm}= \hspace{0.7cm}\Delta{b}$$</p>
-<p>applying the \(5^{th}\) property of matrix norms to \(Ax=b\)
-$$\lVert b \rVert = \lVert Ax \rVert \le \lVert A \rVert \lVert x \rVert$$
-$$\frac{1}{\lVert x \rVert} \le \frac{\lVert A \rVert}{\lVert b \rVert}$$
-multiplying \(A\Delta{x} = \Delta{b}\) by \(A^{-1}\) on both sides</p>
-<p>$$A^{-1}A\Delta{x} = A^{-1}\Delta{b}$$
-$$I\Delta{x} = A^{-1}\Delta{b}$$
+<p>Matrix norm is enough for us to start working on condition number. We will start by accounting in \(Ax=b\) and \(A(x+\Delta{x})=b+\Delta{b}\).</p>
+<p>$$
+\begin{aligned}
+\cancel{Ax} &amp;= \cancel{b} \cr
+\cancel{Ax}+A\Delta{x} &amp;= \cancel{b} + \Delta{b} \cr
+\hline \cr
+A\Delta{x} &amp;= \Delta{b} \cr
+\hline
+\end{aligned}
+$$</p>
+<p>applying the \(5^{th}\) property of matrix norms to \(Ax=b\)</p>
+<p>$$
+\begin{aligned}
+\lVert b \rVert = \lVert Ax \rVert &amp;\le \lVert A \rVert \lVert x \rVert \cr
+\frac{1}{\lVert x \rVert} &amp;\le \frac{\lVert A \rVert}{\lVert b \rVert}
+\end{aligned}
+$$</p>
+<p>multiplying \(A\Delta{x} = \Delta{b}\) by \(A^{-1}\) on both sides</p>
+<p>$$
+\begin{aligned}
+A^{-1}A\Delta{x} &amp;= A^{-1}\Delta{b} \cr
+I\Delta{x} &amp;= A^{-1}\Delta{b}
+\end{aligned}
+$$
 taking matrix norm on both sides
 $$\lVert \Delta{x} \rVert = \lVert A^{-1}\Delta{b} \rVert \le \lVert A^{-1} \rVert \lVert \Delta{b} \rVert$$</p>
 <p>we get,
@@ -574,10 +642,10 @@ This will result in very sensitive computation since
     
     <item>
       <title>Shortcut Learning: Belief trap of Deep Neural Networks</title>
-      <link>https://www.eulogs.com/posts/shortcut-learning/</link>
+      <link>uildDrafts/posts/shortcut-learning/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/shortcut-learning/</guid>
+      <guid>uildDrafts/posts/shortcut-learning/</guid>
       <description>Is your neural network really learning what you intend it to learn? Pressing attention of researchers around the world is required to tackle the common enemy of shortcut learning</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -962,10 +1030,10 @@ This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learne
     
     <item>
       <title>Conscious AI</title>
-      <link>https://www.eulogs.com/posts/conscious-ai/</link>
+      <link>uildDrafts/posts/conscious-ai/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/conscious-ai/</guid>
+      <guid>uildDrafts/posts/conscious-ai/</guid>
       <description>Summarized explanation of Conscious-AI Research Paper</description>
       <content:encoded><![CDATA[<style>
 div {

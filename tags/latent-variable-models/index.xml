@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Latent Variable Models on Eulogs</title>
-    <link>https://www.eulogs.com/tags/latent-variable-models/</link>
+    <link>uildDrafts/tags/latent-variable-models/</link>
     <description>Recent content in Latent Variable Models on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Apr 2023 07:45:46 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/latent-variable-models/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 07:45:46 +0530</lastBuildDate><atom:link href="uildDrafts/tags/latent-variable-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generative Modelling: Stormbreaker 🪓 in AI world</title>
-      <link>https://www.eulogs.com/posts/generative-modelling/</link>
+      <link>uildDrafts/posts/generative-modelling/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
+      <guid>uildDrafts/posts/generative-modelling/</guid>
       <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
       <content:encoded><![CDATA[<style>
 div {
@@ -140,7 +140,7 @@ div {
 <p>Here, distribution over \(\textbf{x}\) is represented in an autoregressive manner:</p>
 <p>$$p(\textbf{x})=p(x_{0})\prod_{i=1}^{D}p(x_{i}\vert\textbf{x}_{&lt;i})$$</p>
 <p>where, \(\textbf{x}_{&lt;i}\) denotes all \(\textbf{x}\)&rsquo;s upto index \(i\).</p>
-<p>Modelling all conditional distributions \(p(x_{i}\vert\textbf{x}_{&lt;i})\) would be computationally inefficient. But there are many ways we solve this, although we will not talk about autoregessive models here.</p>
+<p>Modelling all conditional distributions \(p(x_{i}\vert\textbf{x}_{&lt;i})\) would be computationally inefficient. But there are many ways we solve this, although we will not talk about autoregessive models here. Checkout the post <a href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">Autoregressive Models: Connecting the dots</a> that talk about why we needed these type of models anyway along with its taxonomy.</p>
 <h5 id="flow-based-models">Flow-based Models</h5>
 <p>The change of variable formula provides a principled manner of expressing a density of a random variable by transforming it with an invertible transformation \(f\).</p>
 <p>$$p(\textbf{x})=p(z=f(x))\vert\text{J}_{f(\textbf{x})}\vert$$</p>
@@ -229,7 +229,34 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
 </tr>
 </tbody>
 </table>
-<h2 id="references">References</h2>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Garg, P. (2023a, April 30). Generative Modelling: Stormbreaker 🪓 in AI world. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/generative-modelling/">https://www.eulogs.com/posts/generative-modelling/</a></p>
+</blockquote>
+<p>or</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@article</span><span class="p">{</span><span class="nl">garg_2023</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">title</span>   <span class="p">=</span> <span class="s">&#34;Generative Modelling: Stormbreaker 🪓 in AI world&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">author</span>  <span class="p">=</span> <span class="s">&#34;Garg, Priyam&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">journal</span> <span class="p">=</span> <span class="s">&#34;www.eulogs.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">year</span>    <span class="p">=</span> <span class="s">&#34;2023&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">month</span>   <span class="p">=</span> <span class="s">&#34;Apr&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="na">url</span>     <span class="p">=</span> <span class="s">&#34;https://www.eulogs.com/posts/generative-modelling/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
 <p>[1] Tomczak, J. M. (2022). Deep Generative Modeling. Springer Nature</p>
 <p>[2] Wu, Q., Gao, R., &amp; Zha, H. (2021). Bridging Explicit and Implicit Deep Generative Models via Neural Stein Estimators. In Neural Information Processing Systems (Vol. 34). <a href="https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html">https://papers.nips.cc/paper/2021/hash/5db60c98209913790e4fcce4597ee37c-Abstract.html</a></p>
 <p>[3] Bond-Taylor, S., Leach, A., Long, Y., &amp; Willcocks, C. G. (2021). Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11), 7327–7347. <a href="https://doi.org/10.1109/tpami.2021.3116668">https://doi.org/10.1109/tpami.2021.3116668</a></p>

@@ -2,137 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Eulogs</title>
-    <link>https://www.eulogs.com/tags/</link>
+    <link>uildDrafts/tags/</link>
     <description>Recent content in Tags on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="uildDrafts/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Autoregressive Models</title>
-      <link>https://www.eulogs.com/tags/autoregressive-models/</link>
+      <link>uildDrafts/tags/autoregressive-models/</link>
       <pubDate>Sun, 30 Apr 2023 20:26:02 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/autoregressive-models/</guid>
+      <guid>uildDrafts/tags/autoregressive-models/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Energy-based Models</title>
-      <link>https://www.eulogs.com/tags/energy-based-models/</link>
+      <link>uildDrafts/tags/energy-based-models/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/energy-based-models/</guid>
+      <guid>uildDrafts/tags/energy-based-models/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Flow-based Models</title>
-      <link>https://www.eulogs.com/tags/flow-based-models/</link>
+      <link>uildDrafts/tags/flow-based-models/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/flow-based-models/</guid>
+      <guid>uildDrafts/tags/flow-based-models/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Latent Variable Models</title>
-      <link>https://www.eulogs.com/tags/latent-variable-models/</link>
+      <link>uildDrafts/tags/latent-variable-models/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/latent-variable-models/</guid>
+      <guid>uildDrafts/tags/latent-variable-models/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Condition-Number</title>
-      <link>https://www.eulogs.com/tags/condition-number/</link>
+      <link>uildDrafts/tags/condition-number/</link>
       <pubDate>Sat, 15 Apr 2023 13:59:40 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/condition-number/</guid>
+      <guid>uildDrafts/tags/condition-number/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Adversarial-Learning</title>
-      <link>https://www.eulogs.com/tags/adversarial-learning/</link>
+      <link>uildDrafts/tags/adversarial-learning/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/adversarial-learning/</guid>
+      <guid>uildDrafts/tags/adversarial-learning/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Dataset-Difficulty</title>
-      <link>https://www.eulogs.com/tags/dataset-difficulty/</link>
+      <link>uildDrafts/tags/dataset-difficulty/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/dataset-difficulty/</guid>
+      <guid>uildDrafts/tags/dataset-difficulty/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Explainability-AI</title>
-      <link>https://www.eulogs.com/tags/explainability-ai/</link>
+      <link>uildDrafts/tags/explainability-ai/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/explainability-ai/</guid>
+      <guid>uildDrafts/tags/explainability-ai/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Out-of-Distribution-Data</title>
-      <link>https://www.eulogs.com/tags/out-of-distribution-data/</link>
+      <link>uildDrafts/tags/out-of-distribution-data/</link>
       <pubDate>Fri, 31 Mar 2023 23:13:25 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/out-of-distribution-data/</guid>
+      <guid>uildDrafts/tags/out-of-distribution-data/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>AI-Agents</title>
-      <link>https://www.eulogs.com/tags/ai-agents/</link>
+      <link>uildDrafts/tags/ai-agents/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/ai-agents/</guid>
+      <guid>uildDrafts/tags/ai-agents/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Language-Creation</title>
-      <link>https://www.eulogs.com/tags/language-creation/</link>
+      <link>uildDrafts/tags/language-creation/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/language-creation/</guid>
+      <guid>uildDrafts/tags/language-creation/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Philosophy</title>
-      <link>https://www.eulogs.com/tags/philosophy/</link>
+      <link>uildDrafts/tags/philosophy/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/philosophy/</guid>
+      <guid>uildDrafts/tags/philosophy/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Representations</title>
-      <link>https://www.eulogs.com/tags/representations/</link>
+      <link>uildDrafts/tags/representations/</link>
       <pubDate>Tue, 21 Mar 2023 21:29:46 +0530</pubDate>
       
-      <guid>https://www.eulogs.com/tags/representations/</guid>
+      <guid>uildDrafts/tags/representations/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
