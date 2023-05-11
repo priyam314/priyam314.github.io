@@ -2,25 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.eulogs.com/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/newsletter/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/newsletter/001-vi/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/latent-variable-models/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/research-paper-explanation/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/statistics/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/variational-inference/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/variational-inference-the-path-forward/</loc>
+    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
+  </url><url>
     <loc>https://www.eulogs.com/tags/autoregressive-models/</loc>
     <lastmod>2023-04-30T20:26:02+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</loc>
     <lastmod>2023-04-30T20:26:02+05:30</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/categories/</loc>
-    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/</loc>
-    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/categories/generative-modelling/</loc>
-    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/posts/</loc>
-    <lastmod>2023-04-30T20:26:02+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/tags/</loc>
     <lastmod>2023-04-30T20:26:02+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/tags/energy-based-models/</loc>
@@ -30,9 +51,6 @@
     <lastmod>2023-04-28T07:45:46+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/posts/generative-modelling/</loc>
-    <lastmod>2023-04-28T07:45:46+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/tags/latent-variable-models/</loc>
     <lastmod>2023-04-28T07:45:46+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/categories/taxonomy/</loc>
@@ -83,10 +101,9 @@
     <loc>https://www.eulogs.com/tags/representations/</loc>
     <lastmod>2023-03-21T21:29:46+05:30</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/categories/research-paper-explanation/</loc>
-    <lastmod>2023-03-21T21:29:46+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/archives/</loc>
+  </url><url>
+    <loc>https://www.eulogs.com/newsletter/archives/</loc>
   </url><url>
     <loc>https://www.eulogs.com/search/</loc>
   </url>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Eulogs Newsletter on Eulogs</title>
+    <link>https://www.eulogs.com/newsletter/</link>
+    <description>Recent content in The Eulogs Newsletter on Eulogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.eulogs.com/newsletter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Variational Inference: The Path Forward</title>
+      <link>https://www.eulogs.com/newsletter/001-vi/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/newsletter/001-vi/</guid>
+      <description>Ever felt why we even need Variational AutoEncoders when simple AutoEncoders worked greatly?
+And what the heck is this Variational Inference anyway?
+Leave why or what, whats&amp;rsquo; going on with its&amp;rsquo; mathematics, too hard to grab any intutive understanding!!
+I dealt with these problems for long, and maybe others&amp;rsquo; did too.
+Dont&amp;rsquo; worry, Variational Inference: The Path 🛣️ Forward is here for rescue.
+I have tried to keep things as streamlined as possible, such that readers don&amp;rsquo;t have to worry about connecting broken links among concepts.</description>
+      <content:encoded><![CDATA[<figure>
+    <img loading="lazy" src="/VariationalInference/allinone.png"/> 
+</figure>
+
+<p>Ever felt why we even need Variational AutoEncoders when simple AutoEncoders worked greatly?</p>
+<p>And what the heck is this Variational Inference anyway?</p>
+<p>Leave why or what, whats&rsquo; going on with its&rsquo; mathematics, too hard to grab any intutive understanding!!</p>
+<p>I dealt with these problems for long, and maybe others&rsquo; did too.</p>
+<p>Dont&rsquo; worry, <a href="https://www.eulogs.com/posts/variational-inference-the-path-forward/">Variational Inference: The Path 🛣️ Forward</a> is here for rescue.</p>
+<p>I have tried to keep things as streamlined as possible, such that readers don&rsquo;t have to worry about connecting broken links among concepts.</p>
+<p>Do give it a read, I hope it will provide some <span style="color:#A91B0D">clarity over confusions</style>.</p>
+<p><strong>Thankyou</strong>, </br>
+Eulogs</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

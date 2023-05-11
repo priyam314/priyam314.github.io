@@ -6,7 +6,27 @@
     <description>Recent content in Tags on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2023 20:26:02 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 23:15:04 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latent Variable Models</title>
+      <link>https://www.eulogs.com/tags/latent-variable-models/</link>
+      <pubDate>Wed, 03 May 2023 23:15:04 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/tags/latent-variable-models/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Variational Inference</title>
+      <link>https://www.eulogs.com/tags/variational-inference/</link>
+      <pubDate>Wed, 03 May 2023 23:15:04 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/tags/variational-inference/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Autoregressive Models</title>
       <link>https://www.eulogs.com/tags/autoregressive-models/</link>
@@ -33,16 +53,6 @@
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
       <guid>https://www.eulogs.com/tags/flow-based-models/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Latent Variable Models</title>
-      <link>https://www.eulogs.com/tags/latent-variable-models/</link>
-      <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
-      
-      <guid>https://www.eulogs.com/tags/latent-variable-models/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
