@@ -6,7 +6,7 @@
     <description>Recent content on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.eulogs.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jun 2024 17:37:40 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Variational Inference: The Path 🛣️ Forward</title>
       <link>https://www.eulogs.com/posts/variational-inference-the-path-forward/</link>
@@ -15,63 +15,123 @@
       <guid>https://www.eulogs.com/posts/variational-inference-the-path-forward/</guid>
       <description>Simple and detailed explanation on Variational Inference, along with intutive understanding on hard-to-get math concepts.</description>
       <content:encoded><![CDATA[<style>
-
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
 }
 .Question {
     background-color: #FAF0E6;
-    border-left: 6px solid #DEB887;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
-<div class="Problem">
-   <strong>🚨 Heavy Math Ahead</strong></br>
+<div class="admonition Problem">
+   <div class="title">Heavy Math Ahead</div>
+   <div class="content">
       The following article features maths on steroids, which could delay your page load time. Recommended to refresh once. We apologize for the inconvenience.
+    </div>
 </div>
 </br>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
-<p><cite>&ndash;Bertrand Russell</cite></p>
+  <p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
+  <footer>
+    <strong>Bertrand Russell</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <h2 id="motivation">Motivation</h2>
 <p>Lets&rsquo; recall the Bayes theorem that most of us might already be familiar with, it goes like $P(A \vert B) = \displaystyle \frac{P(B \vert A)P(A)}{P(B)}$. Here, $P(B \vert A)$ is conditional probability which can be interpreted as likelihood function or probability density function if working with continuous system else probability mass function. $P(A)$ is prior probability which is assumed probability distribution of the system before any evidence is taken in account. $P(B)$ is marginal probability which is used as a normalizing quantity. All the recently mentioned quantities are used to inference(reaching conclusion on the basis of evidence and reasoning) about posterior $P(A \vert B)$.</p>
 <p>In bayesian models, we use latent(hidden) variables which govern the distribution of data. We can write these latent variables as $z$ and data (say for images) as $x$. Now bayes theorem will become $P(z \vert x) = \displaystyle \frac{P(x \vert z)P(z)}{P(x)}$, in words it would mean that we have currently assumed some prior distribution over latent variables(e.g. standard normal) multiplying it with likelihood function of getting desired image $x$ for fixed latent variable $z$ and normalizing it with marginal probability of finding desired image out of all plausibilities as $P(x)$. We know prior distribution because we are assuming it, so we may sample from it too and this would make likelihood function to be tractable too since we know $x$, $z$. But quantity that brings hinderance to solving posterior is marginal probability, since we have no realization that how many possible values of $x$ may exist such that we cannot find the probability of getting desired image $x$ out of all plausibilities.</p>
@@ -215,9 +275,11 @@ q(\boldsymbol{z}) = q(z_1, &hellip; , z_m) = q_{\phi_1}(z_1) \cdot q_{\phi_2}(z_
 $$</p>
 <p>$q_{\phi_j}(z_j)$ is a member of some variational family, and in optimization these variational factors $q_{\phi_j}$ are choosen in such a manner to maximize the ELBO.
 These variational factors can be parameters of the distribution.</p>
-<div class="Important">
-   <strong>❗Important</strong></br>
+<div class="admonition Important">
+   <div class="title">Important</div>
+   <div class="content">
 	Variational family is not a model of the observed data—indeed, the data x does not appear in the equation. Instead, it is the ELBO, and the corresponding KL minimization problem, that connects the fitted variational density to the data and model.
+  </div>
 </div>
 <p>Now lets apply a recently learned concept to bayesian mixture of Gaussians just like we did it earlier.</p>
 <h4 id="bayesian-mixture-of-gaussians-1">Bayesian mixture of Gaussians</h4>
@@ -783,57 +845,117 @@ $$</p>
       <guid>https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</guid>
       <description>Desc Text.</description>
       <content:encoded><![CDATA[<style>
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #FFFFE0;
+    border-left:10px solid #FFDF00;
+}
+.Important .title{
+    color: #FFDF00;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
 }
 .Question {
     background-color: #FAF0E6;
-    border-left: 6px solid #DEB887;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>The future will soon be a thing of past</p>
-<p><cite>&ndash;George Carlin</cite></p>
+  <p>The future will soon be a thing of past</p>
+  <footer>
+    <strong>George Carlin</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>Blogpost will talk about <em>need</em> and <em>what</em> of Autoregressive models, but before going towards the <em>what</em>, its&rsquo; better to first understand why we felt the need to have another type of models in machine learning community. We will look at the Motivation behind the creation and what problems we want to solve using them.</p>
 <h2 id="motivation">Motivation</h2>
 <h3 id="problems-we-would-like-to-solve">Problems we would like to solve</h3>
@@ -861,13 +983,15 @@ div {
 </ol>
 <h2 id="function-approximation">Function Approximation</h2>
 <p>Our goal is to estimate true distribution \(p_{data}\) using sampled datapoints \(\textbf{x}^{(1)}, \textbf{x}^{(2)} &hellip; \textbf{x}^{(n)} \sim p_{data}(\textbf{x})\). So we introduce <strong>function approximation</strong> which will learn the weights/parameters \(\theta\) of the likelihood function(here, Neural Network) such that \(p_{\theta}(\textbf{x}) \approx p_{data}(\textbf{x})\).</p>
-<div class="Question">
-   <strong>❓Question</strong></br>
+<div class="admonition Question">
+   <div class="title">Question</div>
+   <div class="content">
       <ol>
       	<li>
-	   How do we design such function approximators to effectively represent complex <b>joint distributions</b> over <b>x</b>, yet remain easy to train?
-	</li>
+	         How do we design such function approximators to effectively represent complex <b>joint distributions</b> over <b>x</b>, yet remain easy to train?
+	      </li>
       </ol>
+   </div>
 </div>
 <p>Now, when we train neural nets what we are actually doing is finding the best weights for the model in order to find best likelihood function. So, designing the model and training procedure go hand in hand. And thi pose a search problem over the parameters.
 $$\arg \min_{\theta} \textbf{loss}(\theta, \textbf{x}^{(1)}, &hellip; ,\textbf{x}^{(n)})$$
@@ -875,8 +999,9 @@ For intutive understanding, think of likelihood function to be <em>Gaussian Dist
 <p>Most likely objective we use is <em>Maximum Likelihood</em>
 $$\arg \min_{\theta} loss(\theta, \textbf{x}^{(1)}, &hellip;, \textbf{x}^{(n)}) = \frac{1}{n} \sum_{i=1}^{n}-\log p_{\theta}(\textbf{x}^{(i)})$$
 It is interesting to note that minimizing KL Divergence is asymptotically equivalent to maximizing the likelihood.</p>
-<div class="Question">
-   <strong>❓How minimizing KL Divergence asymptotically equivalent to maximizing the likelihood?</strong></br>
+<div class="admonition Question">
+   <div class = "title">How minimizing KL Divergence asymptotically equivalent to maximizing the likelihood?</div>
+   <div class ="content">
    <p>Let there exist likelihood function for true distribution <span
 class="math inline">\(P(x\vert\theta^{*})\)</span> and approximate
 function <span class="math inline">\(P(x\vert\theta)\)</span> <span
@@ -903,6 +1028,7 @@ class="math display">\[\begin{aligned}
                   &amp;= \arg \max_{\theta} P(x \vert \theta) \\
                   &amp;= \theta_{max MLE}
 \end{aligned}\]</span></p>
+   </div>
 </div>
 <p>Okay, back to our search problem over parameters we found loss function as maximum likelihood but what procedure to follow for optimization? <strong>Stochastic Gradient Descent</strong> (SGD) seems to work just fine!</p>
 <h2 id="setting-bayes-as-base">Setting Bayes as base</h2>
@@ -934,9 +1060,38 @@ $$</p>
 <p>We are no going to learn any of those methods in this blogpost. In future, links to published blogs corresponding to those methods will be added here as list and you can access them directly. This will ease up the navigation process then may it be you want to access root(like in trees) blog post of <a href="https://www.eulogs.com/posts/generative-modelling/#why-generative-modelling">Generative Modelling: Stormbreaker 🪓 in AI world</a> series or any leaf blog post like LSTM.</p>
 <h2 id="citation">Citation</h2>
 <p>Cited as:</p>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Garg, P. (2023, May 2). Autoregressive Models: Connecting the Dots. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</a></p>
+  <p>Garg, P. (2023, May 2). Autoregressive Models: Connecting the Dots. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/">https://www.eulogs.com/posts/autoregressive-models-connecting-the-dots/</a></p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>or</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -976,45 +1131,79 @@ $$</p>
       <guid>https://www.eulogs.com/posts/generative-modelling/</guid>
       <description>Transformers, Diffusion models, GANs and many such models have taken the world by storm. They all come under the umbrella term of Generative Modelling. In this blog we will see vastness and limitless usage of these models along with their taxonomy.</description>
       <content:encoded><![CDATA[<style>
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-	background-color: #E9FFDB;
-	border-left: 6px solid #4C9A2A;
-	color: #41424C;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-	background-color: #e1f1fd;
-	border-left: 6px solid #72A0C1;
-	color: #41424C;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-	background-color: #FFFFE0;
-	border-left:6px solid #FFDF00;
-	color: #41424C;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
 <p>Through this blogpost we are going to gain in-depth understanding of Generative Models, why we need them, along with current taxanomy. But before diving into the <em>Why?</em>, <em>What?</em> of Generative Models, let us consider a simple example of trained Deep Neural Network(DNN) that classifies images of animals. Although the network is trained so well but adding noise to image could output false classification, even though noise added to image doesn&rsquo;t change the semantics under human perception. This example indicates that neural networks that are used to parameterize the conditional distribution \(p(y|\textbf{x})\) seem to lack <em>semantic</em> understanding of images. A useful model in real world will not only output probability of correctness of classification for example but will be able to tell its level of uncertainity for the answer.</p>
@@ -1124,9 +1313,11 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
 <h3 id="implicit-generative-methods">Implicit Generative Methods</h3>
 <h4 id="gans">GANs</h4>
 <p>Above all described methods except EBMs used <em>log-likelihood</em> function for density estimation, but another approach uses <em>adversarial loss</em> where discriminator \(D(\cdot)\) determines a difference between real data and synthetic data provided by the generator in the implicit form, these are <strong>Generative Adversaial Networks</strong>(GANs) under <em>implicit models</em>.</p>
-<div class="Important">
-❗<strong>Important</strong></br>
+<div class="admonition Important">
+    <div class="title">Important</div>
+    <div class="content">
       It is to be noted that these groups dont' create hard demarcations and there are methods that use concepts from more than one groups for e.g. flow-based GAN model
+    </div>
 </div>
 <h2 id="overview">Overview</h2>
 <p>Below is provided a table that shows comparision of all the four groups of methods on some arbitrary criteria like:-</p>
@@ -1191,9 +1382,38 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
 </tbody>
 </table>
 <h2 id="citation">Citation</h2>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Garg, P. (2023a, April 30). Generative Modelling: Stormbreaker 🪓 in AI world. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/generative-modelling/">https://www.eulogs.com/posts/generative-modelling/</a></p>
+  <p>Garg, P. (2023a, April 30). Generative Modelling: Stormbreaker 🪓 in AI world. Eulogs. Retrieved May 2, 2023, from <a href="https://www.eulogs.com/posts/generative-modelling/">https://www.eulogs.com/posts/generative-modelling/</a></p>
+  <footer>
+    <strong></strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>or</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1232,45 +1452,80 @@ where \(Z=\sum_{\textbf{x}}e^{-E(\textbf{x})}\) is the partition function. \(Z\)
       <guid>https://www.eulogs.com/posts/condition_number/</guid>
       <description>Brief overview of Condition Number and Matrix Norm along with examples</description>
       <content:encoded><![CDATA[<style>
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #FFFFE0;
+    border-left:10px solid #FFDF00;
+}
+.Important .title{
+    color: #FFDF00;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
 <h2 id="condition-number">Condition Number</h2>
@@ -1339,8 +1594,9 @@ $$\lVert \Delta{x} \rVert = \lVert A^{-1}\Delta{b} \rVert \le \lVert A^{-1} \rVe
 $$\boxed{\frac{\lVert \Delta{x} \rVert}{\lVert x \rVert} \le \lVert A \rVert \lVert A^{-1} \rVert \frac{\lVert \Delta{b} \rVert}{\lVert b \rVert}}$$
 This says that the upper bound in relative error of \(x\) would be scaled to \(\kappa(A) = \lVert A \rVert \lVert A^{-1} \rVert\) multiplied by relative error in \(b\), where \(\kappa(A)\) is <strong>Condition Number</strong>. Calculating \(\lVert A \rVert\) is relatively easy than finding \(\lVert A^{-1} \rVert\).</p>
 <p>\(\Delta{b}\) is usually generated by rounding error programs, or when we made some approximation mistake. Hence, it is quite small and this implies relative error in \(x\) depends on condition number. Also we generally use infinity-norm to find matrix norms of matrices.</p>
-<div class="Example"> 
-  <strong>📓 Example</strong></br>
+<div class="admonition Example"> 
+  <div class="title">Example</div>
+  <div class="content">
   Consider
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>7</mn><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>0.7</mn></mrow><annotation encoding="application/x-tex">5x_{1} + 7x_{2} = 0.7</annotation></semantics></math>,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>10</mn><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">7x_{1} + 10x_{2} = 1</annotation></semantics></math>
@@ -1361,9 +1617,11 @@ is given by,
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mn>289</mn></mrow><annotation encoding="application/x-tex">\kappa(A) = 289</annotation></semantics></math></p>
 <p>This says that the upper bound of relative error in solution space is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>289</mn><mi>x</mi><mn>0.01</mn><mo>=</mo><mn>2.89</mn></mrow><annotation encoding="application/x-tex">289x0.01=2.89</annotation></semantics></math></p>
 </div>
+</div>
 <p>A matrix with large condition number is said to be <strong>ill conditioned</strong>. Whereas a matrix with small condition matrix is said to be <strong>well conditioned</strong>. Although large and small is hard to quantify since it depends on many factors of which some can be how powerful computing power we working with, what type of applications we are working with etc.</p>
-<div class="Theoram">
-	<strong>📏 Theoram</strong></br>
+<div class="admonition Theoram">
+	<div class="title">Theoram</div>
+  <div class="content">
 	Let
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
 be a square non-singular matrix then for any singular matrix of the same
@@ -1372,8 +1630,9 @@ size
 we have
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mi>κ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></mfrac><mo>≤</mo><mfrac><mrow><mo stretchy="false" form="prefix">∥</mo><mi>A</mi><mo>−</mo><mi>B</mi><mo stretchy="false" form="postfix">∥</mo></mrow><mrow><mo stretchy="false" form="prefix">∥</mo><mi>A</mi><mo stretchy="false" form="postfix">∥</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{\kappa(A)} \le \frac{\lVert A - B\rVert}{\lVert A \rVert}</annotation></semantics></math>
 <p>This shows that if you have singular matrix which is quite close to non-singular matrix then it will decrease the relative error but inversely decrease the condition number too. In other words, closer the singular matrix to non-singular matrix higher the <em>condition number</em>.</p>
-<div class="Example">
-	<strong>📓 Example</strong></br>
+<div class="admonition Example">
+	<div class="title">Example</div>
+  <div class="content">
 	Consider a matrix
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">B=\begin{pmatrix} 1 &amp; 1 \\
 1 &amp; 1 \end{pmatrix}</annotation></semantics></math> which is
@@ -1400,6 +1659,8 @@ This will result in very sensitive computation since
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\kappa(A) \rightarrow \infty</annotation></semantics></math>
 </div>
 </div>
+</div>
+</div>
 <h2 id="references">References</h2>
 <p>[1] <a href="https://nucinkis-lab.cc.ic.ac.uk/HELM/workbooks/workbook_30/30_4_matrx_norms.pdf">Matrix norms 30 - Imperial College London</a></p>
 <p>[2] Prof. S. Baskar, &ldquo;Week 3 : Lecture 16 : Matrix Norms: Condition Number of a Matrix.&rdquo;, YouTube, uploaded by IIT Bombay July 2018, 02 February 2023, <a href="https://www.youtube.com/watch?v=IXNz7BU0CDc">https://www.youtube.com/watch?v=IXNz7BU0CDc</a></p>
@@ -1416,51 +1677,116 @@ This will result in very sensitive computation since
       <guid>https://www.eulogs.com/posts/shortcut-learning/</guid>
       <description>Is your neural network really learning what you intend it to learn? Pressing attention of researchers around the world is required to tackle the common enemy of shortcut learning</description>
       <content:encoded><![CDATA[<style>
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Life is not complex. We are complex. Life is simple, and the simple thing is the right thing.</p>
-<p>-<cite>Oscar Wilde</Cite></p>
+  <p>Life is not complex. We are complex. Life is simple, and the simple thing is the right thing.</p>
+  <footer>
+    <strong>Oscar Wilde</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>Over the span of last decade, Deep Learning has made our life simpler by bringing its power into the applications of healthcare, self-driving cars, fraud-prevention and many more. Since the launch of ChatGPT many companies have made applications which help users in brainstorming and simplifying comlpex ideas, assist in writing content, even assist in writing codes etc. Their predictive analysis power depends on the assumption that these models are learning what we intend them to learn, e.g. to classify a cow, model must be looking at cow and not at grass. But has it been the case the whole time?</p>
 <h2 id="introduction">Introduction</h2>
 <p>Lets&rsquo; start with an example of Bob and Alice who are studying for high school exams. Bob used a strategy of mugging up while Alice likes to understand things in detail and then ponder over it. Bobs&rsquo; strategy got him good grades in test unlike Alice, but can Bob extrapolate/generalize this strategy in order to apply the learned concepts to real world applications like Alice. Alice can use her strategy almost anywhere in life and would benefit from it but Bob will fail in the wild. Bob has taken shortcut to complete the task instead of actually learning principles. But are these shortcuts bad? When human driver takes shortcut route to reach destination its good for you since it saved time. So it depends on the type of task we are doing and also the context of it to determine taking shortcut is okay or not.</p>
@@ -1528,7 +1854,7 @@ div {
     <img loading="lazy" src="/ShortcutLearning/toyExample.png"/> 
 </figure>
 
-<p>In the above figure, we are given a dataset containing two categories(star ⭐ , crescent 🌙) with labels A, B respectively. In the machine learning we usually divide the dataset into training set and test set in some proportion say 80:20 or if the number of datapoints are large then 90:10. Also our datasets usually follow some distribution class wise e.g images of cow would be mainly found in grassfields. Now after dividing the dataset into train and test sets we get i.i.d which is identically independent distribution, think of it as a subset sampled from the dataset. Such that this subset follows the same distribution as dataset. But when only some part of dataset is taken in consideration to make a subset e.g. cow is taken as object of interest, but we change the conditions in which those objects are existing e.g. cow on road instead on grassland. Then this is o.o.d which is out of distribution.</p>
+<p>In the above figure, we are given a dataset containing two categories(star &#x2b50; , crescent &#x1f319;) with labels A, B respectively. In the machine learning we usually divide the dataset into training set and test set in some proportion say 80:20 or if the number of datapoints are large then 90:10. Also our datasets usually follow some distribution class wise e.g images of cow would be mainly found in grassfields. Now after dividing the dataset into train and test sets we get i.i.d which is identically independent distribution, think of it as a subset sampled from the dataset. Such that this subset follows the same distribution as dataset. But when only some part of dataset is taken in consideration to make a subset e.g. cow is taken as object of interest, but we change the conditions in which those objects are existing e.g. cow on road instead on grassland. Then this is o.o.d which is out of distribution.</p>
 <p>After the model has been trained on the train set, its been tested on i.i.d subset where location of classes seemed to have not changed. Because of which Neural Network model were able to classify them correcty. But, why location? why not shape?. For that we used o.o.d subset in which we changed the location of classes and neural network model failed to classify it correctly. If it would be learning the classification on the basis of shapes which is <em>intended feature</em> then it would have answerd correctly. Wrong classification shows that it learned the location of classes in order to classify which is <em>spurious feature</em>.</p>
 <h2 id="where-do-these-shortcuts-come-from">Where do these shortcuts come from?</h2>
 <h3 id="principle-of-least-effort">Principle of Least Effort</h3>
@@ -1598,15 +1924,48 @@ div {
 </li>
 </ol>
 <h4 id="instance-attribution">Instance Attribution</h4>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>You are what you eat</p>
-<p><cite>&ndash;Victor H. Lindlahr</cite></p>
+  <p>You are what you eat</p>
+  <footer>
+    <strong>Victor H. Lindlahr</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>The following quote also applies to Deep Neural Networks except they consume data and then base their prediction. Every preceding datapoint affect the prediction of sucessive sample in dataset. Instance Attribution methods are useful in predicting the data samples that contributed more to the models&rsquo; prediction performance for particular instance/datapoint. Empirical analysis indicates that the most influential training data share similar artifacts e.g. high overlapping bias between <em>premise</em> and <em>hypothesis</em> for NLI task.</p>
 <h3 id="morgans-canon-for-machine-learning">Morgans&rsquo; Canon for Machine Learning</h3>
-<div class="Definition">
-    <strong>📖 Anthromorphism</strong> </br>
+<div class="admonition Definition">
+    <div class="title">Anthromorphism</div>
+	<div class="content">
     <em>The tendency of humans to attribute human-like psychological characterstics to non-humans on the basis of insufficient empirical evidence</em>
+	</div>
 </div>
 <p>Psychologist Lloyd Morgon developed a guideline for interpreting non-human behaviour in response to the fallacy of Anthromorphism.</p>
 <p><b>Morgons&rsquo; Canon</b> says that &ldquo;<em>In no case is an animal activity to be interpreted in terms of higher psychological processes if it can be fairly interpreted in terms of processes which stand lower on the scale of psychological evolution and development</em>&rdquo;</p>
@@ -1652,9 +2011,11 @@ we are only concerned with easy features (\(I\)) rather than hard features, sinc
 <p>then, \(p_{1} \land p_{2} \land p_{3} = S \land I \land E\)<br/>
 This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learned by initial layers early during training</em>&rdquo;</p>
 <p>Now we need to define the notion of task difficulty(\(\Psi\)) which actually depends on model and data distribution (\(X, y\)) where \(X\) is input and \(y\) is label. Then \(\Psi_{M}^{P}(X \rightarrow y)\) indicates difficulty of predicting label \(y\) given input \(X\) for model \(M\) and some distribution \(P\), where \(X, y \sim P\). Spurious feature \(s\) is potential shortcut for model \(M\) iff \(\Psi_{M}^{P_{tr}}(X \rightarrow y) &gt; \Psi_{M}^{P_{tr}}(X \rightarrow s)\). Which means, difficulty of predicting spurious feature \(s\) is easier than predicting label \(y\) for model \(M\) for a training distribution \(P_{tr}\).</p>
-<div class="Important">
-	<strong>❗What does it mean to predict spurious features?</strong> </br>
+<div class="admonition Important">
+	<div class="title">What does it mean to predict spurious features?</div>
+	<div class="content">
 	Labels are the true predictions for an input, and model can learn to output these labels either by learning intended features or spurious features. So predicting spurious features means correctly predicting the input using spurious features.
+	</div>
 </div>
 <p>But how would we measure the task difficulty? using two metrics <cite>Prediction Depth</cite> and \(\nu\)-<cite>Usable Information</cite>. <b>Prediction Depth</b> of an input is <em>defined as minimum number of layers required by the model to classify the input</em>. \(\mathit{\boldsymbol{\nu}}\)<b>-Usable Information</b> is defined as <em>amount of usable information in some input </em> \(X\)<em> that can be used by model to predict</em> \(y\), higher the usable information easier the dataset or datapoint/sample is.</p>
 <p>We are close to the end of this section, hold tight. Now consider two datasets \(D_{s} \sim P_{tr}(X, y)\) with spurious features and \(D_{i} \sim P_{te}(X, y)\) without spurious features. Taking some assumptions in Prediction Depth (PD) if mean PD of \(D_{s}\) is less than mean PD of \(D_{i}\) then \(\nu\)-Usable Information for \(D_{s}\) is higher than for \(D_{i}\). In such scenerio model will tend to learn spurious features than intended ones. And this can help to identify spurious features.</p>
@@ -1709,10 +2070,41 @@ This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learne
 <h3 id="introducing-challenging-evaluation-datasets">Introducing Challenging Evaluation Datasets</h3>
 <p><b>Adversarial GLUE</b> is proposed for adversarial robustness evaluation which contains 14 adversarial attack methods. Similary <b>Checklist</b>, <b>Robustness Gym</b> can be used to evaluate the robustness of LLMs. Introduction to datasets that contain wide range of tasks, biases and so on can give better insights about Deep Neural Nets performance. [<a href="#4">4</a>] introduced <b>Spurious ImageNet</b> which consists of 40 spurious features and each consists 75 images, images didn&rsquo;t had any class objects like car, animal, object but just spurious features. This allowed to check the influence of unintended features over the performance for any vision model.</p>
 <h2 id="conclusion">Conclusion</h2>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Every shortcut has a price usually greater than the reward</p>
-<p><cite>&ndash;Bryant H. McGill</cite></p>
+  <p>Every shortcut has a price usually greater than the reward</p>
+  <footer>
+    <strong>Bryant H. McGill</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>Applications powered using Deep Learning are taking world by storm but under the light of aid that these models are providing us, we shall not unlook the fundamental working principle of these models. Shortcut Learning rather being taken as another problem in the field of Neural Nets, it should be considered default for performance comparision and to better understand what our neural net is actually learning. Overcoming shortcut learning will help in solving fairness, robustness, deployability and trust worthiness of these models. This will eventually make machine decisions more transparent.</p>
 <h2 id="citation">Citation</h2>
 <p>Cited as:</p>
@@ -2327,6 +2719,16 @@ Few AI applications exist at this level. Although empathy and intution are <em>b
 <li>Mehta N, Mashour GA. General and specific consciousness: a first-order representationalist approach. <em>Front Psychol</em>. 2013;4:407. Published 2013 Jul 16. doi:10.3389/fpsyg.2013.00407</li>
 </ol>
 ]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>文章列表</title>
+      <link>https://www.eulogs.com/posts/_index.zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.eulogs.com/posts/_index.zh/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
   </channel>

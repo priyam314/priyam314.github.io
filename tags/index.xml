@@ -6,7 +6,17 @@
     <description>Recent content in Tags on Eulogs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 May 2023 23:15:04 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jun 2024 17:23:37 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>https://www.eulogs.com/tags/first/</link>
+      <pubDate>Wed, 12 Jun 2024 17:23:37 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/tags/first/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Latent Variable Models</title>
       <link>https://www.eulogs.com/tags/latent-variable-models/</link>
@@ -38,7 +48,7 @@
     </item>
     
     <item>
-      <title>Energy-based Models</title>
+      <title>Energy-Based Models</title>
       <link>https://www.eulogs.com/tags/energy-based-models/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       
@@ -48,7 +58,7 @@
     </item>
     
     <item>
-      <title>Flow-based Models</title>
+      <title>Flow-Based Models</title>
       <link>https://www.eulogs.com/tags/flow-based-models/</link>
       <pubDate>Fri, 28 Apr 2023 07:45:46 +0530</pubDate>
       

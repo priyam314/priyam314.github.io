@@ -10,9 +10,10 @@
 <meta name="description" content="Simple and detailed explanation on Variational Inference, along with intutive understanding on hard-to-get math concepts.">
 <meta name="author" content="Priyam Garg">
 <link rel="canonical" href="https://www.eulogs.com/posts/variational-inference-the-path-forward/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.0c95ca4546be4dcece0de1be6e85255f8fe5e1c36d77137478f2fbd0de57aa0b.css" integrity="sha256-DJXKRUa&#43;Tc7ODeG&#43;boUlX4/l4cNtdxN0ePL70N5Xqgs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.4c80700219be0abebad51160eea4ddac9d2870a01325a01688e6053e1d5fff62.css" integrity="sha256-TIBwAhm&#43;Cr661RFg7qTdrJ0ocKATJaAWiOYFPh1f/2I=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.eulogs.com/favicon.ico">
 <link rel="apple-touch-icon" href="https://www.eulogs.com/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://www.eulogs.com/posts/variational-inference-the-path-forward/">
 
 <meta name="twitter:title" content="Variational Inference: The Path 🛣️ Forward | Eulogs" />
 <meta name="twitter:description" content="Simple and detailed explanation on Variational Inference, along with intutive understanding on hard-to-get math concepts." />
@@ -55,7 +56,7 @@
   "keywords": [
     "Variational Inference", "Latent Variable Models"
   ],
-  "wordCount" : "5265",
+  "wordCount" : "5264",
   "inLanguage": "en",
   "datePublished": "2023-05-03T23:15:04+05:30",
   "dateModified": "2023-05-03T23:15:04+05:30",
@@ -225,13 +226,18 @@ function toggleThemeListener() {
                 </a>
             </li>
             <li>
-                <a href="https://www.eulogs.com/newsletter/" title="Newsletter"
-                >Newsletter
+                <a href="https://www.eulogs.com/cs_notes/" title="CS Notes"
+                >CS Notes
                 </a>
             </li>
             <li>
                 <a href="https://www.eulogs.com/categories/" title="Categories"
                 >Categories
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eulogs.com/newsletter/" title="Newsletter"
+                >Newsletter
                 </a>
             </li>
             <li>
@@ -266,7 +272,7 @@ function toggleThemeListener() {
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
   <span class="post-tags"><a href="https://www.eulogs.com/tags/variational-inference/">Variational Inference</a><a href="https://www.eulogs.com/tags/latent-variable-models/">Latent Variable Models</a></span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text" style="user-select: text;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" style="user-select: text;"></path><polyline points="14 2 14 8 20 8" style="user-select: text;"></polyline><line x1="16" y1="13" x2="8" y2="13" style="user-select: text;"></line><line x1="16" y1="17" x2="8" y2="17" style="user-select: text;"></line><polyline points="10 9 9 9 8 9" style="user-select: text;"></polyline></svg>
-  <span>5265 words</span></span><span class="meta-item">
+  <span>5264 words</span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
   <span>25 min</span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg"width="24" height="24" viewBox="0 0 24 24" stroke="black" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg>Priyam Garg</span>
@@ -359,63 +365,123 @@ function toggleThemeListener() {
 
   
   <div class="post-content"><style>
-
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
 }
 .Question {
     background-color: #FAF0E6;
-    border-left: 6px solid #DEB887;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
-<div class="Problem">
-   <strong>🚨 Heavy Math Ahead</strong></br>
+<div class="admonition Problem">
+   <div class="title">Heavy Math Ahead</div>
+   <div class="content">
       The following article features maths on steroids, which could delay your page load time. Recommended to refresh once. We apologize for the inconvenience.
+    </div>
 </div>
 </br>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
-<p><cite>&ndash;Bertrand Russell</cite></p>
+  <p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
+  <footer>
+    <strong>Bertrand Russell</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <h2 id="motivation">Motivation<a hidden class="anchor" aria-hidden="true" href="#motivation">¶</a></h2>
 <p>Lets&rsquo; recall the Bayes theorem that most of us might already be familiar with, it goes like $P(A \vert B) = \displaystyle \frac{P(B \vert A)P(A)}{P(B)}$. Here, $P(B \vert A)$ is conditional probability which can be interpreted as likelihood function or probability density function if working with continuous system else probability mass function. $P(A)$ is prior probability which is assumed probability distribution of the system before any evidence is taken in account. $P(B)$ is marginal probability which is used as a normalizing quantity. All the recently mentioned quantities are used to inference(reaching conclusion on the basis of evidence and reasoning) about posterior $P(A \vert B)$.</p>
 <p>In bayesian models, we use latent(hidden) variables which govern the distribution of data. We can write these latent variables as $z$ and data (say for images) as $x$. Now bayes theorem will become $P(z \vert x) = \displaystyle \frac{P(x \vert z)P(z)}{P(x)}$, in words it would mean that we have currently assumed some prior distribution over latent variables(e.g. standard normal) multiplying it with likelihood function of getting desired image $x$ for fixed latent variable $z$ and normalizing it with marginal probability of finding desired image out of all plausibilities as $P(x)$. We know prior distribution because we are assuming it, so we may sample from it too and this would make likelihood function to be tractable too since we know $x$, $z$. But quantity that brings hinderance to solving posterior is marginal probability, since we have no realization that how many possible values of $x$ may exist such that we cannot find the probability of getting desired image $x$ out of all plausibilities.</p>
@@ -559,9 +625,11 @@ q(\boldsymbol{z}) = q(z_1, &hellip; , z_m) = q_{\phi_1}(z_1) \cdot q_{\phi_2}(z_
 $$</p>
 <p>$q_{\phi_j}(z_j)$ is a member of some variational family, and in optimization these variational factors $q_{\phi_j}$ are choosen in such a manner to maximize the ELBO.
 These variational factors can be parameters of the distribution.</p>
-<div class="Important">
-   <strong>❗Important</strong></br>
+<div class="admonition Important">
+   <div class="title">Important</div>
+   <div class="content">
 	Variational family is not a model of the observed data—indeed, the data x does not appear in the equation. Instead, it is the ELBO, and the corresponding KL minimization problem, that connects the fitted variational density to the data and model.
+  </div>
 </div>
 <p>Now lets apply a recently learned concept to bayesian mixture of Gaussians just like we did it earlier.</p>
 <h4 id="bayesian-mixture-of-gaussians-1">Bayesian mixture of Gaussians<a hidden class="anchor" aria-hidden="true" href="#bayesian-mixture-of-gaussians-1">¶</a></h4>
@@ -1137,7 +1205,7 @@ $$</p>
     </main>
     
 <footer class="footer">
-  <span>&copy; 2023 <a href="https://www.eulogs.com/">Eulogs</a></span><span style="display: inline-block; margin-left: 1em;">
+  <span>&copy; 2024 <a href="https://www.eulogs.com/">Eulogs</a></span><span style="display: inline-block; margin-left: 1em;">
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
   </span>
   <span style="display: inline-block; margin-left: 1em;">

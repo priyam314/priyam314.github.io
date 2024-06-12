@@ -15,51 +15,116 @@
       <guid>https://www.eulogs.com/posts/shortcut-learning/</guid>
       <description>Is your neural network really learning what you intend it to learn? Pressing attention of researchers around the world is required to tackle the common enemy of shortcut learning</description>
       <content:encoded><![CDATA[<style>
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Life is not complex. We are complex. Life is simple, and the simple thing is the right thing.</p>
-<p>-<cite>Oscar Wilde</Cite></p>
+  <p>Life is not complex. We are complex. Life is simple, and the simple thing is the right thing.</p>
+  <footer>
+    <strong>Oscar Wilde</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>Over the span of last decade, Deep Learning has made our life simpler by bringing its power into the applications of healthcare, self-driving cars, fraud-prevention and many more. Since the launch of ChatGPT many companies have made applications which help users in brainstorming and simplifying comlpex ideas, assist in writing content, even assist in writing codes etc. Their predictive analysis power depends on the assumption that these models are learning what we intend them to learn, e.g. to classify a cow, model must be looking at cow and not at grass. But has it been the case the whole time?</p>
 <h2 id="introduction">Introduction</h2>
 <p>Lets&rsquo; start with an example of Bob and Alice who are studying for high school exams. Bob used a strategy of mugging up while Alice likes to understand things in detail and then ponder over it. Bobs&rsquo; strategy got him good grades in test unlike Alice, but can Bob extrapolate/generalize this strategy in order to apply the learned concepts to real world applications like Alice. Alice can use her strategy almost anywhere in life and would benefit from it but Bob will fail in the wild. Bob has taken shortcut to complete the task instead of actually learning principles. But are these shortcuts bad? When human driver takes shortcut route to reach destination its good for you since it saved time. So it depends on the type of task we are doing and also the context of it to determine taking shortcut is okay or not.</p>
@@ -127,7 +192,7 @@ div {
     <img loading="lazy" src="/ShortcutLearning/toyExample.png"/> 
 </figure>
 
-<p>In the above figure, we are given a dataset containing two categories(star ⭐ , crescent 🌙) with labels A, B respectively. In the machine learning we usually divide the dataset into training set and test set in some proportion say 80:20 or if the number of datapoints are large then 90:10. Also our datasets usually follow some distribution class wise e.g images of cow would be mainly found in grassfields. Now after dividing the dataset into train and test sets we get i.i.d which is identically independent distribution, think of it as a subset sampled from the dataset. Such that this subset follows the same distribution as dataset. But when only some part of dataset is taken in consideration to make a subset e.g. cow is taken as object of interest, but we change the conditions in which those objects are existing e.g. cow on road instead on grassland. Then this is o.o.d which is out of distribution.</p>
+<p>In the above figure, we are given a dataset containing two categories(star &#x2b50; , crescent &#x1f319;) with labels A, B respectively. In the machine learning we usually divide the dataset into training set and test set in some proportion say 80:20 or if the number of datapoints are large then 90:10. Also our datasets usually follow some distribution class wise e.g images of cow would be mainly found in grassfields. Now after dividing the dataset into train and test sets we get i.i.d which is identically independent distribution, think of it as a subset sampled from the dataset. Such that this subset follows the same distribution as dataset. But when only some part of dataset is taken in consideration to make a subset e.g. cow is taken as object of interest, but we change the conditions in which those objects are existing e.g. cow on road instead on grassland. Then this is o.o.d which is out of distribution.</p>
 <p>After the model has been trained on the train set, its been tested on i.i.d subset where location of classes seemed to have not changed. Because of which Neural Network model were able to classify them correcty. But, why location? why not shape?. For that we used o.o.d subset in which we changed the location of classes and neural network model failed to classify it correctly. If it would be learning the classification on the basis of shapes which is <em>intended feature</em> then it would have answerd correctly. Wrong classification shows that it learned the location of classes in order to classify which is <em>spurious feature</em>.</p>
 <h2 id="where-do-these-shortcuts-come-from">Where do these shortcuts come from?</h2>
 <h3 id="principle-of-least-effort">Principle of Least Effort</h3>
@@ -197,15 +262,48 @@ div {
 </li>
 </ol>
 <h4 id="instance-attribution">Instance Attribution</h4>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>You are what you eat</p>
-<p><cite>&ndash;Victor H. Lindlahr</cite></p>
+  <p>You are what you eat</p>
+  <footer>
+    <strong>Victor H. Lindlahr</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>The following quote also applies to Deep Neural Networks except they consume data and then base their prediction. Every preceding datapoint affect the prediction of sucessive sample in dataset. Instance Attribution methods are useful in predicting the data samples that contributed more to the models&rsquo; prediction performance for particular instance/datapoint. Empirical analysis indicates that the most influential training data share similar artifacts e.g. high overlapping bias between <em>premise</em> and <em>hypothesis</em> for NLI task.</p>
 <h3 id="morgans-canon-for-machine-learning">Morgans&rsquo; Canon for Machine Learning</h3>
-<div class="Definition">
-    <strong>📖 Anthromorphism</strong> </br>
+<div class="admonition Definition">
+    <div class="title">Anthromorphism</div>
+	<div class="content">
     <em>The tendency of humans to attribute human-like psychological characterstics to non-humans on the basis of insufficient empirical evidence</em>
+	</div>
 </div>
 <p>Psychologist Lloyd Morgon developed a guideline for interpreting non-human behaviour in response to the fallacy of Anthromorphism.</p>
 <p><b>Morgons&rsquo; Canon</b> says that &ldquo;<em>In no case is an animal activity to be interpreted in terms of higher psychological processes if it can be fairly interpreted in terms of processes which stand lower on the scale of psychological evolution and development</em>&rdquo;</p>
@@ -251,9 +349,11 @@ we are only concerned with easy features (\(I\)) rather than hard features, sinc
 <p>then, \(p_{1} \land p_{2} \land p_{3} = S \land I \land E\)<br/>
 This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learned by initial layers early during training</em>&rdquo;</p>
 <p>Now we need to define the notion of task difficulty(\(\Psi\)) which actually depends on model and data distribution (\(X, y\)) where \(X\) is input and \(y\) is label. Then \(\Psi_{M}^{P}(X \rightarrow y)\) indicates difficulty of predicting label \(y\) given input \(X\) for model \(M\) and some distribution \(P\), where \(X, y \sim P\). Spurious feature \(s\) is potential shortcut for model \(M\) iff \(\Psi_{M}^{P_{tr}}(X \rightarrow y) &gt; \Psi_{M}^{P_{tr}}(X \rightarrow s)\). Which means, difficulty of predicting spurious feature \(s\) is easier than predicting label \(y\) for model \(M\) for a training distribution \(P_{tr}\).</p>
-<div class="Important">
-	<strong>❗What does it mean to predict spurious features?</strong> </br>
+<div class="admonition Important">
+	<div class="title">What does it mean to predict spurious features?</div>
+	<div class="content">
 	Labels are the true predictions for an input, and model can learn to output these labels either by learning intended features or spurious features. So predicting spurious features means correctly predicting the input using spurious features.
+	</div>
 </div>
 <p>But how would we measure the task difficulty? using two metrics <cite>Prediction Depth</cite> and \(\nu\)-<cite>Usable Information</cite>. <b>Prediction Depth</b> of an input is <em>defined as minimum number of layers required by the model to classify the input</em>. \(\mathit{\boldsymbol{\nu}}\)<b>-Usable Information</b> is defined as <em>amount of usable information in some input </em> \(X\)<em> that can be used by model to predict</em> \(y\), higher the usable information easier the dataset or datapoint/sample is.</p>
 <p>We are close to the end of this section, hold tight. Now consider two datasets \(D_{s} \sim P_{tr}(X, y)\) with spurious features and \(D_{i} \sim P_{te}(X, y)\) without spurious features. Taking some assumptions in Prediction Depth (PD) if mean PD of \(D_{s}\) is less than mean PD of \(D_{i}\) then \(\nu\)-Usable Information for \(D_{s}\) is higher than for \(D_{i}\). In such scenerio model will tend to learn spurious features than intended ones. And this can help to identify spurious features.</p>
@@ -308,10 +408,41 @@ This leads to conjecture, &ldquo;<em>Shortcuts are easy features that are learne
 <h3 id="introducing-challenging-evaluation-datasets">Introducing Challenging Evaluation Datasets</h3>
 <p><b>Adversarial GLUE</b> is proposed for adversarial robustness evaluation which contains 14 adversarial attack methods. Similary <b>Checklist</b>, <b>Robustness Gym</b> can be used to evaluate the robustness of LLMs. Introduction to datasets that contain wide range of tasks, biases and so on can give better insights about Deep Neural Nets performance. [<a href="#4">4</a>] introduced <b>Spurious ImageNet</b> which consists of 40 spurious features and each consists 75 images, images didn&rsquo;t had any class objects like car, animal, object but just spurious features. This allowed to check the influence of unintended features over the performance for any vision model.</p>
 <h2 id="conclusion">Conclusion</h2>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Every shortcut has a price usually greater than the reward</p>
-<p><cite>&ndash;Bryant H. McGill</cite></p>
+  <p>Every shortcut has a price usually greater than the reward</p>
+  <footer>
+    <strong>Bryant H. McGill</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <p>Applications powered using Deep Learning are taking world by storm but under the light of aid that these models are providing us, we shall not unlook the fundamental working principle of these models. Shortcut Learning rather being taken as another problem in the field of Neural Nets, it should be considered default for performance comparision and to better understand what our neural net is actually learning. Overcoming shortcut learning will help in solving fairness, robustness, deployability and trust worthiness of these models. This will eventually make machine decisions more transparent.</p>
 <h2 id="citation">Citation</h2>
 <p>Cited as:</p>

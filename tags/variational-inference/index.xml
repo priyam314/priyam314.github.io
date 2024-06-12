@@ -15,63 +15,123 @@
       <guid>https://www.eulogs.com/posts/variational-inference-the-path-forward/</guid>
       <description>Simple and detailed explanation on Variational Inference, along with intutive understanding on hard-to-get math concepts.</description>
       <content:encoded><![CDATA[<style>
-
-div {
-  margin-bottom: 15px;
-  padding: 4px 12px;
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
 }
 .Example {
     background-color: #DCDCDC;
-    border-left: 6px solid #696969;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
 }
 .Theoram {
-        background-color: #E9FFDB;
-        border-left: 6px solid #4C9A2A;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
 }
 .Definition {
-        background-color: #e1f1fd;
-        border-left: 6px solid #72A0C1;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
 }
 .Important{
-        background-color: #FFFFE0;
-        border-left:6px solid #FFDF00;
-        color: #41424C;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
 }
 .Problem {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
 }
 .Info {
     background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
 }
 .Question {
     background-color: #FAF0E6;
-    border-left: 6px solid #DEB887;
-    color: #41424C;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
 }
 </style>
-<div class="Problem">
-   <strong>🚨 Heavy Math Ahead</strong></br>
+<div class="admonition Problem">
+   <div class="title">Heavy Math Ahead</div>
+   <div class="content">
       The following article features maths on steroids, which could delay your page load time. Recommended to refresh once. We apologize for the inconvenience.
+    </div>
 </div>
 </br>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+  
+
+
 <blockquote>
-<p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
-<p><cite>&ndash;Bertrand Russell</cite></p>
+  <p>Science does not aim at establishing immutable truths and eternal dogmas; its aim is to approach the truth by successive approximations, without claiming that at any stage final and complete accuracy has been achieved.</p>
+  <footer>
+    <strong>Bertrand Russell</strong>
+    
+      
+        
+      
+    
+  </footer>
 </blockquote>
+
 <h2 id="motivation">Motivation</h2>
 <p>Lets&rsquo; recall the Bayes theorem that most of us might already be familiar with, it goes like $P(A \vert B) = \displaystyle \frac{P(B \vert A)P(A)}{P(B)}$. Here, $P(B \vert A)$ is conditional probability which can be interpreted as likelihood function or probability density function if working with continuous system else probability mass function. $P(A)$ is prior probability which is assumed probability distribution of the system before any evidence is taken in account. $P(B)$ is marginal probability which is used as a normalizing quantity. All the recently mentioned quantities are used to inference(reaching conclusion on the basis of evidence and reasoning) about posterior $P(A \vert B)$.</p>
 <p>In bayesian models, we use latent(hidden) variables which govern the distribution of data. We can write these latent variables as $z$ and data (say for images) as $x$. Now bayes theorem will become $P(z \vert x) = \displaystyle \frac{P(x \vert z)P(z)}{P(x)}$, in words it would mean that we have currently assumed some prior distribution over latent variables(e.g. standard normal) multiplying it with likelihood function of getting desired image $x$ for fixed latent variable $z$ and normalizing it with marginal probability of finding desired image out of all plausibilities as $P(x)$. We know prior distribution because we are assuming it, so we may sample from it too and this would make likelihood function to be tractable too since we know $x$, $z$. But quantity that brings hinderance to solving posterior is marginal probability, since we have no realization that how many possible values of $x$ may exist such that we cannot find the probability of getting desired image $x$ out of all plausibilities.</p>
@@ -215,9 +275,11 @@ q(\boldsymbol{z}) = q(z_1, &hellip; , z_m) = q_{\phi_1}(z_1) \cdot q_{\phi_2}(z_
 $$</p>
 <p>$q_{\phi_j}(z_j)$ is a member of some variational family, and in optimization these variational factors $q_{\phi_j}$ are choosen in such a manner to maximize the ELBO.
 These variational factors can be parameters of the distribution.</p>
-<div class="Important">
-   <strong>❗Important</strong></br>
+<div class="admonition Important">
+   <div class="title">Important</div>
+   <div class="content">
 	Variational family is not a model of the observed data—indeed, the data x does not appear in the equation. Instead, it is the ELBO, and the corresponding KL minimization problem, that connects the fitted variational density to the data and model.
+  </div>
 </div>
 <p>Now lets apply a recently learned concept to bayesian mixture of Gaussians just like we did it earlier.</p>
 <h4 id="bayesian-mixture-of-gaussians-1">Bayesian mixture of Gaussians</h4>

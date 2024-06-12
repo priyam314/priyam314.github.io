@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.eulogs.com/cs_notes/c-notes/</loc>
+    <lastmod>2024-06-12T17:37:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/cs_notes/coa-notes/</loc>
+    <lastmod>2024-06-12T17:37:40+05:30</lastmod>
+  </url><url>
     <loc>https://www.eulogs.com/</loc>
-    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-12T17:37:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/cs_notes/</loc>
+    <lastmod>2024-06-12T17:37:40+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/</loc>
+    <lastmod>2024-06-12T17:23:37+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/first/</loc>
+    <lastmod>2024-06-12T17:23:37+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/categories/first/</loc>
+    <lastmod>2024-06-12T17:23:37+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/cs_notes/c-notes/introduction/</loc>
+    <lastmod>2024-06-12T17:23:37+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/tags/</loc>
+    <lastmod>2024-06-12T17:23:37+05:30</lastmod>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/</loc>
+    <lastmod>2024-02-19T23:44:07+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/newsletter/</loc>
     <lastmod>2023-05-11T00:00:00+00:00</lastmod>
@@ -11,22 +38,13 @@
     <loc>https://www.eulogs.com/newsletter/001-vi/</loc>
     <lastmod>2023-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.eulogs.com/categories/</loc>
-    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
-  </url><url>
     <loc>https://www.eulogs.com/tags/latent-variable-models/</loc>
-    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/posts/</loc>
     <lastmod>2023-05-03T23:15:04+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/categories/research-paper-explanation/</loc>
     <lastmod>2023-05-03T23:15:04+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/categories/statistics/</loc>
-    <lastmod>2023-05-03T23:15:04+05:30</lastmod>
-  </url><url>
-    <loc>https://www.eulogs.com/tags/</loc>
     <lastmod>2023-05-03T23:15:04+05:30</lastmod>
   </url><url>
     <loc>https://www.eulogs.com/tags/variational-inference/</loc>
@@ -106,5 +124,7 @@
     <loc>https://www.eulogs.com/newsletter/archives/</loc>
   </url><url>
     <loc>https://www.eulogs.com/search/</loc>
+  </url><url>
+    <loc>https://www.eulogs.com/posts/_index.zh/</loc>
   </url>
 </urlset>

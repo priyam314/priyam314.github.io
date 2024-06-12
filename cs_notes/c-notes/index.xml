@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C Notes on Eulogs</title>
+    <link>https://www.eulogs.com/cs_notes/c-notes/</link>
+    <description>Recent content in C Notes on Eulogs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2024 17:37:40 +0530</lastBuildDate><atom:link href="https://www.eulogs.com/cs_notes/c-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://www.eulogs.com/cs_notes/c-notes/introduction/</link>
+      <pubDate>Wed, 12 Jun 2024 17:23:37 +0530</pubDate>
+      
+      <guid>https://www.eulogs.com/cs_notes/c-notes/introduction/</guid>
+      <description>Desc Text.</description>
+      <content:encoded><![CDATA[<style>
+.admonition {
+  padding: 15px;
+  margin-bottom: 21px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admonition .title {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 3px;
+    border: 1px solid;
+    border-style: hidden hidden solid;
+    font-weight: bold;
+}
+.admonition .content {
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-top: 0.8em;
+    margin-left: 0;
+    border-left: 0;
+    border-top: 0;
+    min-height: 0;
+    font-size: 1em;
+    font-family: ubuntu;
+    color: #595652;
+}
+.Example {
+    background-color: #DCDCDC;
+    border-left: 10px solid #696969;
+}
+.Example .title{
+    color: #696969;
+}
+.Theoram {
+    background-color: #E9FFDB;
+    border-left: 10px solid #4C9A2A;
+}
+.Theoram .title{
+    color: #4C9A2A;
+}
+.Definition {
+    background-color: #e1f1fd;
+    border-left: 10px solid #72A0C1;
+}
+.Definition .title {
+    color: #72a0c1;
+}
+.Important{
+    background-color: #fffacd;
+    border-left:10px solid #8b864e;
+}
+.Important .title{
+    color: #8b864e;
+}
+.Problem {
+    background-color: #ffe4e1;
+    border-left: 10px solid #CA3433;
+}
+.Problem .title{
+    color: #CA3433;
+}
+.Info {
+    background-color: #e7f3fe;
+    border-left: 10px solid #2196F3;
+}
+.Info .title{
+    color: #2196F3;
+}
+.Question {
+    background-color: #FAF0E6;
+    border-left: 10px solid #8b814c;
+}
+.Question .title{
+    color: #8b814c;
+}
+</style>
+<h2 id="important-points">Important points</h2>
+<ol>
+<li>How programs in c would be compiled are compiler and system dependent.</li>
+<li>Programs begin executing at the beginning of <code>main</code></li>
+<li><code>printf</code> never supplies a newline automatically</li>
+<li><code>\t</code> for tab, <code>\b</code> for backspace, <code>\&quot;</code> for double quote, <code>\\</code> for backslash itself</li>
+<li><code>printf()</code> is not a part of C language, its&rsquo; part of the C standard library, which has very close relation to C language. Parts of C languages are <code>declarations</code>, <code>operators</code>, <code>expressions</code>, <code>statements</code>, <code>pointer</code>, <code>arithmetic</code> etc.</li>
+<li>Text input or output regardless of its origination is dealt with streams of characters.</li>
+</ol>
+<h2 id="unsigned-and-signed-integers">Unsigned and Signed Integers</h2>
+<p>Lets&rsquo; take an example code:</p>
+<p>$\underline{\textbf{Example 1}}$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>$-9$ would be represented in $2&rsquo;s$ complement format.</p>
+<ul>
+<li>$9 = 000 \dots 0001001$</li>
+<li>$-9 = 111 \dots 1110111$</li>
+</ul>
+<div class="admonition Info">
+    <div class="title">Note</div>
+       <div class="content">
+          By default <code>int</code> is signed
+       </div>
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// -9
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%u&#34;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// huge number (why?) [111...10111] would be treated as unsigned and its huge.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><strong>%d</strong>: This will treat y as <code>signed</code> number.</li>
+<li><strong>%u</strong>: This will treat y as <code>unsigned</code> number</li>
+</ul>
+<div class="admonition Important">
+    <div class="title">Important</div>
+       <div class="content">
+          <code>printf()</code> doesnt' use the information regarding type of data
+       </div>
+</div>
+<hr>
+<p>$\underline{\textbf{Example 2}}$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// -9
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%u&#34;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// huge number again
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="extension-and-truncation">Extension and Truncation</h3>
+<p>For extra information</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">short</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">short</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">short</span> <span class="kt">signed</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>All the above definitions are same.</p>
+<h4 id="extension">Extension</h4>
+<blockquote>
+<p>Copying a lower bit number to higher bit number, e.g. <em>short</em> to <em>int</em></p>
+</blockquote>
+<p>$\underline{\textbf{Example 1}}$</p>
+<p><code>short int x = 9;</code></p>
+<p>$32$-bit extension</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$16$ bits</th>
+<th style="text-align:center">$16$ bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">0000 0000 0000 1001</td>
+</tr>
+</tbody>
+</table>
+<table align="center">
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td></td>
+		 <td>0000 0000 0000 1001</td>
+  </tr>
+</table>
+<p>we want to copy this x to new variable,</p>
+<p><code>int ix = x;</code></p>
+<table>
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td>0000 0000 0000 0000</td>
+		 <td>0000 0000 0000 1001</td>
+  </tr>
+</table>
+<p>copy depends on the <code>source</code> and not on what we are extending it to (destination)</p>
+<hr>
+<p>$\underline{\textbf{Example 2}}$</p>
+<p><code>short int x = -9;</code></p>
+<table align="center">
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td></td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>we want to copy this x to new variable,</p>
+<p><code>int ix = x;</code></p>
+<table>
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td>1111 1111 1111 1111</td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>Source is signed so I copied all $1&rsquo;s$</p>
+<hr>
+<p>$\underline{\textbf{Example 3}}$</p>
+<p><code>short int x = -9;</code></p>
+<table align="center">
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td></td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>we want to copy this x to new variable,</p>
+<p><code>unsigned int ix = x;</code></p>
+<table>
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td>1111 1111 1111 1111</td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>Destination (<code>unsigned</code>) doesnt&rsquo; matter.</p>
+<hr>
+<p>$\underline{\textbf{Example 4}}$</p>
+<p><code>unsigned short int x = -9;</code></p>
+<table align="center">
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td></td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>we want to copy this x to new variable,</p>
+<p><code>int ix = x;</code></p>
+<table>
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td>0000 0000 0000 0000</td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<hr>
+<p>$\underline{\textbf{Example 5}}$</p>
+<p><code>unsigned short int x = -9;</code></p>
+<table align="center">
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td></td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+<p>we want to copy this x to new variable,</p>
+<p><code>unsigned int ix = x;</code></p>
+</br>
+</br>
+</br>
+<table>
+  <tr>
+    <td colspan="2">32 bit extension</td>
+  </tr>
+  <tr>
+	    <td>16 bits</td>
+	    <td>16 bits</td>
+  </tr>
+  <tr>
+		 <td>0000 0000 0000 0000</td>
+		 <td>1111 1111 1111 0111</td>
+  </tr>
+</table>
+</br>
+<h5 id="extension-depends-on-rhssource">Extension depends on RHS(<code>source</code>)</h5>
+<ul>
+<li>Promotion always happens according to the source variables&rsquo; type
+<ul>
+<li><strong>Signed</strong>: <code>sign extension</code> (copy MSB-0 or 1 to fill new spaces)</li>
+<li><strong>Unsigned</strong>: <code>zero fill</code> (copy 0&rsquo;s to fill new space)</li>
+</ul>
+</li>
+</ul>
+</br>
+</br>
+<h4 id="truncation">Truncation</h4>
+<blockquote>
+<p>Copying higher bit number to lower bit number</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<ul>
+<li>Regardless of source/destination or signed/unsigned type, truncation always just truncates.</li>
+<li>This can cause number to <strong>change drastically in sign and value</strong></li>
+</ul>
+</blockquote>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
